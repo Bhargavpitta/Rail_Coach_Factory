@@ -1,0 +1,63 @@
+.about-page {
+  padding: 2.5rem 0 3rem;
+}
+
+.about-page__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: hsl(228 60% 32%);
+  border-bottom: 3px solid hsl(24 90% 50%);
+  padding-bottom: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.about-page__section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(228 55% 38%);
+  margin-bottom: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.about-page__text {
+  color: hsl(220 10% 35%);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+.about-page__achievement {
+  padding: 0.5rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  color: hsl(220 10% 30%);
+  font-size: 0.95rem;
+}
+
+.about-page__achievement::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: hsl(145 60% 36%);
+  font-weight: 700;
+}
+
+.about-page__card {
+  background: hsl(228 60% 32%);
+  color: hsl(0 0% 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.about-page__card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: hsl(38 80% 50%);
+  margin-bottom: 0.5rem;
+}
+
+.about-page__card-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}

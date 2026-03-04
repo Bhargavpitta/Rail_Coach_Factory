@@ -1,0 +1,112 @@
+{
+  "site": {
+    "title": "Rail Coach Factory, Kapurthala",
+    "subtitle": "Ministry of Railways, Government of India",
+    "tagline": "Serving Customers with a Smile"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About RCF",
+    "administration": "Administration",
+    "departments": "Departments",
+    "tenders": "Tenders",
+    "news": "News & Announcements",
+    "contact": "Contact Us"
+  },
+  "home": {
+    "heroTitle": "Rail Coach Factory, Kapurthala",
+    "heroSubtitle": "Manufacturing world-class railway coaches since 1986",
+    "heroCta": "Learn More",
+    "welcomeTitle": "Welcome to Rail Coach Factory",
+    "welcomeText": "Rail Coach Factory (RCF), Kapurthala is one of the premier production units of Indian Railways, engaged in the manufacture of all types of railway passenger coaches. Established in 1986 with German collaboration, RCF has grown to become a symbol of excellence in coach manufacturing.",
+    "quickLinks": "Quick Links",
+    "eOffice": "e-Office",
+    "onlinePayment": "Online Payment",
+    "complaints": "Complaints (Rail Madad)",
+    "gst": "GST - Indian Railways",
+    "publicGrievances": "Public Grievances",
+    "visitorCount": "Total Visitors",
+    "newsTitle": "News & Announcements",
+    "tendersTitle": "Active Tenders",
+    "leadershipTitle": "Leadership"
+  },
+  "about": {
+    "title": "About Rail Coach Factory",
+    "history": "History",
+    "historyText": "Rail Coach Factory (RCF), Kapurthala was established in 1986 as a state-of-the-art coach manufacturing unit of Indian Railways. It was set up with technical collaboration from M/s Linke Hofmann Busch (LHB), Germany. Over the years, RCF has emerged as one of the most modern and largest coach manufacturing facilities in India.",
+    "mission": "Our Mission",
+    "missionText": "To manufacture world-class railway coaches using cutting-edge technology, ensuring passenger safety and comfort while adhering to the highest quality standards.",
+    "vision": "Our Vision",
+    "visionText": "To be a global leader in railway coach manufacturing, setting benchmarks in innovation, sustainability, and customer satisfaction.",
+    "achievements": "Key Achievements",
+    "achievement1": "Manufactured over 50,000 coaches since inception",
+    "achievement2": "Largest LHB coach manufacturing facility in India",
+    "achievement3": "Export of coaches to multiple countries",
+    "achievement4": "ISO 9001:2015 certified production facility",
+    "achievement5": "Pioneer in Vande Bharat coach manufacturing"
+  },
+  "departments": {
+    "title": "Departments",
+    "mechanical": "Mechanical Engineering",
+    "electrical": "Electrical Engineering",
+    "stores": "Stores Department",
+    "accounts": "Accounts Department",
+    "personnel": "Personnel Department",
+    "quality": "Quality Assurance",
+    "planning": "Planning Department",
+    "safety": "Safety Department"
+  },
+  "tenders": {
+    "title": "Tenders",
+    "activeTenders": "Active Tenders",
+    "awardedTenders": "Awarded Tenders",
+    "eoi": "Expression of Interest",
+    "surplusItems": "Surplus Items",
+    "slNo": "Sl. No.",
+    "tenderNo": "Tender No.",
+    "description": "Description",
+    "closingDate": "Closing Date",
+    "status": "Status",
+    "open": "Open",
+    "closed": "Closed"
+  },
+  "news": {
+    "title": "News & Announcements",
+    "latest": "Latest News",
+    "archive": "News Archive",
+    "readMore": "Read More"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Address",
+    "addressText": "Rail Coach Factory, Kapurthala - 144602, Punjab, India",
+    "phone": "Phone",
+    "email": "Email",
+    "fax": "Fax",
+    "reachUs": "How to Reach RCF",
+    "byRail": "By Rail",
+    "byRailText": "Kapurthala railway station is well connected to major cities. Direct trains available from Delhi, Mumbai, and Kolkata.",
+    "byRoad": "By Road",
+    "byRoadText": "Kapurthala is well connected by road. NH-1 passes through Jalandhar which is 20 km from Kapurthala.",
+    "byAir": "By Air",
+    "byAirText": "Nearest airport is Sri Guru Ram Dass Jee International Airport, Amritsar (85 km) and Adampur Airport (30 km).",
+    "seniorOfficers": "Senior Officers Contact"
+  },
+  "footer": {
+    "copyright": "© 2026 Rail Coach Factory, Kapurthala. All Rights Reserved.",
+    "ministry": "Ministry of Railways, Government of India",
+    "importantLinks": "Important Links",
+    "indianRailways": "Indian Railways",
+    "railwayBoard": "Railway Board",
+    "irctc": "IRCTC",
+    "indiaGov": "india.gov.in",
+    "disclaimer": "Disclaimer",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "sitemap": "Sitemap"
+  },
+  "lang": {
+    "en": "English",
+    "hi": "हिन्दी"
+  }
+}

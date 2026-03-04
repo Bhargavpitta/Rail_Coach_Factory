@@ -1,0 +1,86 @@
+.site-header {
+  background: linear-gradient(135deg, hsl(228 65% 22%), hsl(228 60% 32%));
+  border-bottom: 4px solid hsl(24 90% 50%);
+}
+
+/* Container for Indian Railways Logo */
+.site-header__logo-img {
+  width: 85px; /* Increased size */
+  height: 85px;
+  object-fit: contain;
+  background: white; /* Matches the white inside the logo */
+  padding: 4px;
+  border-radius: 50%;
+  border: 2px solid hsl(0 0% 100% / 0.3);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.site-header__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: hsl(0 0% 100%);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.site-header__subtitle {
+  font-size: 0.85rem;
+  color: hsl(0 0% 100% / 0.8);
+  font-weight: 400;
+}
+
+.site-header__tagline {
+  font-size: 0.95rem;
+  color: hsl(38 80% 50%);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.site-header__lang-btn {
+  padding: 0.35rem 0.85rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 1px solid hsl(0 0% 100% / 0.3);
+  color: hsl(0 0% 100%);
+  background: transparent;
+}
+
+.site-header__lang-btn:hover {
+  background: hsl(0 0% 100% / 0.15);
+}
+
+.site-header__lang-btn--active {
+  background: hsl(0 0% 100%);
+  color: hsl(228 60% 32%);
+  border-color: hsl(0 0% 100%);
+}
+
+/* --- Increased size for Emblem --- */
+.site-header__emblem-img {
+  width: 90px;  /* Much larger as requested */
+  height: auto;
+  max-height: 110px;
+  background: white; /* Removes the dark header background behind the white emblem image */
+  padding: 6px;
+  border-radius: 4px;
+  /* This blend mode helps if your image has a slightly off-white background */
+  mix-blend-mode: lighten; 
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+@media (max-width: 768px) {
+  .site-header__title {
+    font-size: 1.2rem;
+  }
+  .site-header__logo-img {
+    width: 60px;
+    height: 60px;
+  }
+  .site-header__emblem-img {
+    width: 60px;
+    /* Keep it visible on mobile but smaller */
+  }
+}
