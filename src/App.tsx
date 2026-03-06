@@ -15,11 +15,14 @@ import Certificates from "./pages/AboutRCF/Certificates";
 import OrganisationProfile from "./pages/AboutRCF/OrganisationProfile";
 import GeneralManagers from "./pages/AboutRCF/GeneralManagers";
 import AboutRCF from "./components/navitems/AboutRCF";
+import Aboutrcf from "./pages/AboutRCF/AboutRCF"
 import TenderInfo from "./components/navitems/TenderInfo";
 import ContactUs from "./components/navitems/ContactUs";
 import Products from "./components/navitems/Products";
 import StaffCorner from "./components/navitems/StaffCorner";
 import Vendor from "./components/navitems/Vendor";
+import OrganisationStructure from "./pages/AboutRCF/OrganisationStructure";
+import Environment from "./pages/AboutRCF/Environment";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -36,6 +39,14 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<AboutRCF />} />
+                <Route path="/about/about-rcf" element={<Aboutrcf />} />
+                <Route path="/about/certificates" element={<Certificates />} />
+                <Route path="/about/organisation-profile" element={<OrganisationProfile />} />
+                <Route path="/about/general-managers" element={<GeneralManagers />} />
+                <Route path="/about/organisationstructure" element={<OrganisationStructure />} />
+                 <Route path="/about/environment" element={<Environment />} />
+                
+
                 <Route path="/departments" element={<Departments />} />
                 <Route path="/tenders" element={<TenderInfo />} />
                 <Route path="/products" element={<Products />} />
@@ -43,13 +54,8 @@ const App = () => (
                 <Route path="/vendors" element={<Vendor />} />
                 <Route path="/contact" element={<ContactUs />} />
                 <Route path="/news" element={<News />} />
-                
-                <Route path="*" element={<NotFound />} />
-                <Route path="/about/certificates" element={<Certificates />} />
-                <Route path="/organisation-profile" element={<OrganisationProfile />} />
-                <Route path="/about/general-managers" element={<GeneralManagers />} />
 
-                
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
             <Footer />

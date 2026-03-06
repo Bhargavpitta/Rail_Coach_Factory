@@ -1,0 +1,211 @@
+/* --- Root Container Transitions --- */
+.structure-container {
+  padding: 10px;
+  animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Breadcrumb Styling --- */
+.breadcrumb {
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+  color: #64748b;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.breadcrumb-link {
+  color: #1e3a8a; /* Deep Navy */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+/* --- Header & Title --- */
+.page-header-section {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.page-main-title {
+  color: #1e3a8a ; /* Slate Dark */
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 12px;
+}
+
+.gold-separator {
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(90deg, #eab308 0%, #fbbf24 100%); /* Premium Gold */
+  border-radius: 10px;
+}
+
+/* --- Document List Grid --- */
+.document-list-wrapper {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.document-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.document-card-row:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+  transform: scale(1.005);
+}
+
+.doc-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.doc-icon-circle {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+}
+
+.doc-text h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.doc-text p {
+  margin: 4px 0 0 0;
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* --- Modern Action Buttons --- */
+.doc-action-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-action-view {
+  background-color: #f8fafc;
+  color: #1e3a8a;
+  border: 1.5px solid #e2e8f0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-action-view:hover {
+  background-color: #1e3a8a;
+  color: white;
+  border-color: #1e3a8a;
+}
+
+.btn-action-download {
+  background: #0f172a; /* Sleek Black/Navy */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+
+.btn-action-download:hover {
+  background: #334155;
+}
+
+.is-viewing {
+  background-color: #1e3a8a !important;
+  color: white !important;
+  box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
+}
+
+/* --- Professional PDF Viewer --- */
+.integrated-pdf-viewer {
+  margin-top: 40px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  background: #f1f5f9;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.viewer-controls {
+  background: #0f172a;
+  padding: 14px 24px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.viewer-label {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.viewer-label::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #22c55e; /* Online Status Dot */
+  border-radius: 50%;
+}
+
+.btn-close-viewer {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-close-viewer:hover {
+  background: #ef4444; /* Alert Red on hover */
+  border-color: #ef4444;
+}
+
+.pdf-frame-embed {
+  border: none;
+  background: #ffffff;
+}

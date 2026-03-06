@@ -1,0 +1,107 @@
+/* Container & Title */
+.structure-page {
+  padding: 10px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.main-title {
+  color: #1e3a8a; /* Deep Navy */
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.title-underline {
+  width: 70px;
+  height: 5px;
+  background: linear-gradient(90deg, #eab308 0%, #fbbf24 100%); /* Gold Gradient */
+  border-radius: 10px;
+  margin-bottom: 35px;
+}
+
+/* Document Row */
+.doc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.doc-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.doc-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.doc-icon-wrapper {
+  background: #eff6ff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue-icon {
+  color: #1e3a8a;
+}
+
+.doc-title-text {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.doc-btns {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-view-modern, .btn-download-modern {
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+/* View Button - Deep Navy */
+.btn-view-modern {
+  background-color: #1e3a8a;
+  color: #ffffff;
+}
+
+.btn-view-modern:hover {
+  background-color: #1e40af;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+}
+
+/* Download Button - Gold/Slate */
+.btn-download-modern {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-download-modern:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}

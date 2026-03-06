@@ -14,7 +14,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap; /* Forces single horizontal line */
+  flex-wrap: nowrap;
 }
 
 .main-nav__item {
@@ -26,7 +26,7 @@
   align-items: center;
   padding: 0.75rem 0.8rem;
   color: hsl(0 0% 100%);
-  font-size: 0.75rem; /* Smaller font to fit all items */
+  font-size: 0.75rem;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
@@ -34,25 +34,20 @@
   transition: background 0.2s;
 }
 
-/* Highlight only when active */
 .main-nav__link--active {
   background: hsl(228 60% 32%);
 }
 
-/* Open dropdown only on hover */
-.main-nav__item:hover .main-nav__dropdown {
-  display: block;
-}
-
+/* Base Dropdown Styling */
 .main-nav__dropdown {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: hsl(228 55% 40%);
-  min-width: 180px; /* Reduced width */
-  max-height: 400px; /* Limits length of the dropdown */
-  overflow-y: auto; /* Adds scroll if list is too long */
+  min-width: 200px; /* Slightly wider for sub-indicators */
+  max-height: 500px; 
+  overflow-y: visible; /* Changed to visible to allow sub-menus to show */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -60,13 +55,25 @@
   z-index: 1000;
 }
 
-.main-nav__dropdown-item a {
+/* Open dropdown on hover */
+.main-nav__item:hover > .main-nav__dropdown,
+.main-nav__dropdown-item:hover > .main-nav__dropdown {
   display: block;
-  padding: 0.4rem 0.8rem; /* Compact vertical padding */
+}
+
+.main-nav__dropdown-item {
+  position: relative; /* Crucial for positioning sub-menus */
+  border-bottom: 1px solid hsl(228 55% 48%);
+}
+
+.main-nav__dropdown-item a {
+  display: flex; /* Flex to align text and ChevronRight */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
   color: white;
   text-decoration: none;
   font-size: 0.7rem;
-  border-bottom: 1px solid hsl(228 55% 48%);
   white-space: normal;
   line-height: 1.2;
 }
@@ -75,12 +82,18 @@
   background: hsl(228 60% 32%);
 }
 
-/* Hide mobile toggle entirely */
+/* ✅ NESTED SUBMENU LOGIC (Level 3 and beyond) */
+.main-nav__dropdown-item > .main-nav__dropdown {
+  top: 0;
+  left: 100%; /* Pushes the sub-menu to the right side */
+  margin-top: 0;
+  border-left: 1px solid hsl(228 55% 48%);
+}
+
 .main-nav__mobile-toggle {
   display: none !important;
 }
 
-/* Ensure single line even on smaller screens until it physically can't fit */
 @media (max-width: 1024px) {
   .main-nav__link {
     padding: 0.75rem 0.5rem;
