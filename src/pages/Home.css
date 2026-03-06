@@ -160,3 +160,12 @@
 .gm-featured-section {
   background-image: linear-gradient(to right, #f8fafc, #ffffff);
 }
+
+.news-card-small {
+  background: #f9fafb;
+  border-left: 3px solid #1e3a8a;
+}
+
+.news-card-small:hover {
+  background: #f3f4f6;
+}

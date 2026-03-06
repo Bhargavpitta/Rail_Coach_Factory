@@ -87,24 +87,40 @@ const Home = () => {
 
           {/* --- RIGHT SIDE: NEWS SIDEBAR --- */}
           <aside className="lg:w-1/3">
-            <div className="sidebar-news shadow-md border rounded-lg overflow-hidden">
-              <h2 className="bg-blue-900 text-white p-4 flex items-center gap-2 font-bold">
-                <Newspaper size={20} />
-                Latest Announcements
-              </h2>
-              <div className="p-4 bg-white space-y-4 max-h-[500px] overflow-y-auto">
-                {newsItems.map((news, index) => (
-                  <div key={index} className="border-b pb-3 last:border-0 hover:bg-gray-50 p-1 transition-colors">
-                    <span className="text-xs font-bold text-blue-600 block">{news.date}</span>
-                    <p className="text-sm text-gray-800 leading-snug cursor-pointer">{news.text}</p>
-                  </div>
-                ))}
-                <button className="w-full text-center text-sm font-bold text-red-700 mt-4 hover:underline">
-                  View All News
-                </button>
-              </div>
-            </div>
-          </aside>
+  <div className="sidebar-news border rounded-lg overflow-hidden bg-white shadow-sm">
+
+    <h2 className="bg-blue-900 text-white px-4 py-3 flex items-center gap-2 font-semibold text-sm">
+      <Newspaper size={18} />
+      Latest Announcements
+    </h2>
+
+    <div className="p-4 space-y-3">
+
+      {newsItems.slice(0,2).map((news, index) => (
+        <div
+          key={index}
+          className="news-card-small border rounded-md p-3 hover:shadow-sm transition"
+        >
+          <span className="text-xs font-semibold text-blue-700">
+            {news.date}
+          </span>
+
+          <p className="text-sm text-gray-800 mt-1 leading-snug">
+            {news.text}
+          </p>
+        </div>
+      ))}
+
+      <Link
+        to="/news"
+        className="block text-center text-sm font-semibold text-red-700 mt-3 hover:underline"
+      >
+        View All News →
+      </Link>
+
+    </div>
+  </div>
+</aside>
 
         </div>
       </div>

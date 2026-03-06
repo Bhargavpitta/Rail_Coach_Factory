@@ -1,0 +1,82 @@
+/* Container takes full screen width and height minus navbar */
+.official-layout {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 45px); /* Adjusted for Navbar height */
+  background-color: #f0f2f5;
+}
+
+/* SIDEBAR STYLING */
+.official-sidebar {
+  width: 300px;
+  background-color: #ffffff;
+  border-right: 2px solid #e0e0e0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+.sidebar-brand {
+  background-color: hsl(228, 55%, 45%); /* Your Navbar Blue */
+  color: #ffffff;
+  padding: 18px 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-align: center;
+  border-bottom: 3px solid #ffc107; /* Official Gold Stripe */
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+}
+
+.sidebar-item:hover {
+  background-color: #f8f9ff;
+  color: hsl(228, 55%, 45%);
+  padding-left: 25px;
+}
+
+/* EXACT CLICKED COLOR (BLUE) */
+.sidebar-item.is-active {
+  background-color: hsl(228, 55%, 45%) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-left: 6px solid #ffc107; /* Gold indicator when clicked */
+}
+
+/* CONTENT AREA STYLING */
+.official-main {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.content-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Content Headings */
+.content-inner h2 {
+  color: hsl(228, 55%, 45%);
+  font-size: 1.8rem;
+  border-bottom: 2px solid #eeeeee;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
