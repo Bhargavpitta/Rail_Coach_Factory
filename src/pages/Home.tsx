@@ -2,40 +2,29 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import HeroBanner from "@/components/HeroBanner";
 import NewsMarquee from "@/components/NewsMarquee";
 import QuickLinks from "@/components/QuickLinks";
-import { Users } from "lucide-react";
+import { Users, Newspaper, Award } from "lucide-react";
+import { Link } from "react-router-dom"; // Added for navigation
 import "./Home.css";
 
 /* ✅ IMPORT LEADER IMAGES */
 import AshwiniVaishnaw from "@/assets/leaders/Shri Ashwini Vaishnaw.jpg";
 import VSomanna from "@/assets/leaders/V._Somanna_in_2024.jpg";
 import RavneetSingh from "@/assets/leaders/ravneet-singh-bittu.jpg";
+import AjayNandan from "@/assets/leaders/image.png"; // Add your GM photo here
 
 /* ✅ NEWS DATA */
 const newsItems = [
-  { date: "2026-02-28", text: "RCF Begins Production of Coaches for Export to Bangladesh Railways" },
-  { date: "2026-02-25", text: "Employees take Pledge under Nasha Mukt Bharat Abhiyaan at Rail Coach Factory, Kapurthala" },
-  { date: "2026-02-22", text: "Rail Coach Factory observes 150 Years of 'Vande Mataram'" },
-  { date: "2026-02-20", text: "Friendly Matches held at Rail Coach Factory to mark 100 Years of Indian Hockey" },
-  { date: "2026-02-18", text: "77th Republic Day celebrated at Rail Coach Factory, Kapurthala" },
+  { date: "28 Feb 2026", text: "RCF Begins Production of Coaches for Export to Bangladesh Railways" },
+  { date: "25 Feb 2026", text: "Employees take Pledge under Nasha Mukt Bharat Abhiyaan" },
+  { date: "22 Feb 2026", text: "Rail Coach Factory observes 150 Years of 'Vande Mataram'" },
+  { date: "20 Feb 2026", text: "Friendly Matches held to mark 100 Years of Indian Hockey" },
+  { date: "18 Feb 2026", text: "77th Republic Day celebrated at RCF, Kapurthala" },
 ];
 
-/* ✅ LEADERS DATA */
 const leaders = [
-  {
-    name: "Shri Ashwini Vaishnaw",
-    role: "Hon’ble Minister for Railways",
-    image: AshwiniVaishnaw,
-  },
-  {
-    name: "Shri V. Somanna",
-    role: "Hon’ble Minister of State for Railways",
-    image: VSomanna,
-  },
-  {
-    name: "Shri Ravneet Singh Bittu",
-    role: "Hon’ble Minister of State for Railways",
-    image: RavneetSingh,
-  },
+  { name: "Shri Ashwini Vaishnaw", role: "Hon’ble Minister for Railways", image: AshwiniVaishnaw },
+  { name: "Shri V. Somanna", role: "Hon’ble Minister of State for Railways", image: VSomanna },
+  { name: "Shri Ravneet Singh Bittu", role: "Hon’ble Minister of State for Railways", image: RavneetSingh },
 ];
 
 const Home = () => {
@@ -43,50 +32,81 @@ const Home = () => {
 
   return (
     <div className="home">
-
-      {/* ✅ HERO BANNER */}
       <HeroBanner />
+      {/* <NewsMarquee items={newsItems} /> */}
 
-      {/* ✅ NEWS MARQUEE */}
-      <NewsMarquee items={newsItems} />
-
-      {/* ✅ QUICK LINKS (BETWEEN BANNER & LEADERSHIP) */}
       <section className="quick-links-wrapper">
         <QuickLinks />
       </section>
 
-      {/* ✅ MAIN CONTENT */}
       <div className="mx-auto max-w-7xl px-4 md:px-6">
+        {/* ✅ TWO-COLUMN LAYOUT: MAIN CONTENT (LEFT) | NEWS SIDEBAR (RIGHT) */}
+        <div className="flex flex-col lg:flex-row gap-8 mt-8">
+          
+          {/* --- LEFT SIDE: LEADERSHIP --- */}
+          <div className="lg:w-2/3">
+            <section className="home-section">
+              <h2 className="home-section__title flex items-center gap-2">
+                <Users size={20} />
+                {t("home.leadershipTitle")}
+              </h2>
 
-        {/* ✅ LEADERSHIP SECTION */}
-        <section className="home-section">
-          <h2 className="home-section__title flex items-center gap-2">
-            <Users size={20} />
-            {t("home.leadershipTitle")}
-          </h2>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {leaders.map((leader) => (
-              <div key={leader.name} className="home-leadership__card">
-
-                {/* PHOTO */}
-                <div className="home-leadership__photo">
-                  <img
-                    src={leader.image}
-                    alt={leader.name}
-                    className="h-40 w-40 mx-auto rounded-full object-cover border-4 border-gray-200"
-                  />
-                </div>
-
-                {/* NAME & ROLE */}
-                <div className="home-leadership__name">{leader.name}</div>
-                <div className="home-leadership__role">{leader.role}</div>
-
+              {/* Top Ministers Grid */}
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 mb-10">
+                {leaders.map((leader) => (
+                  <div key={leader.name} className="home-leadership__card">
+                    <div className="home-leadership__photo">
+                      <img src={leader.image} alt={leader.name} className="leader-img" />
+                    </div>
+                    <div className="home-leadership__name">{leader.name}</div>
+                    <div className="home-leadership__role">{leader.role}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
 
+              {/* ✅ ADDED: GENERAL MANAGER SECTION (DOWNSIDE) */}
+              <div className="gm-featured-section border-t pt-8 mt-4">
+                <div className="flex flex-col md:flex-row items-center gap-6 bg-blue-50 p-6 rounded-lg border border-blue-100 shadow-sm">
+                   <img 
+                    src={AjayNandan} 
+                    alt="Sh. Ajay Nandan" 
+                    className="w-40 h-52 object-cover border-4 border-white shadow-md rounded"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold text-blue-900">Sh. Ajay Nandan</h3>
+                    <p className="text-red-700 font-bold uppercase text-sm tracking-wide">General Manager, RCF</p>
+                    <p className="text-gray-600 mt-2 text-sm">Leading Rail Coach Factory, Kapurthala towards excellence in production and technological innovation.</p>
+                    {/* <Link to="/about/general-managers" className="inline-block mt-4 text-blue-700 font-semibold hover:underline text-sm">
+                      View All General Managers →
+                    </Link> */}
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          {/* --- RIGHT SIDE: NEWS SIDEBAR --- */}
+          <aside className="lg:w-1/3">
+            <div className="sidebar-news shadow-md border rounded-lg overflow-hidden">
+              <h2 className="bg-blue-900 text-white p-4 flex items-center gap-2 font-bold">
+                <Newspaper size={20} />
+                Latest Announcements
+              </h2>
+              <div className="p-4 bg-white space-y-4 max-h-[500px] overflow-y-auto">
+                {newsItems.map((news, index) => (
+                  <div key={index} className="border-b pb-3 last:border-0 hover:bg-gray-50 p-1 transition-colors">
+                    <span className="text-xs font-bold text-blue-600 block">{news.date}</span>
+                    <p className="text-sm text-gray-800 leading-snug cursor-pointer">{news.text}</p>
+                  </div>
+                ))}
+                <button className="w-full text-center text-sm font-bold text-red-700 mt-4 hover:underline">
+                  View All News
+                </button>
+              </div>
+            </div>
+          </aside>
+
+        </div>
       </div>
     </div>
   );

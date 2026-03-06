@@ -117,3 +117,46 @@
   color: #6b7280;
   margin-top: 4px;
 }
+
+/* Sidebar Styling */
+.sidebar-news {
+  position: sticky;
+  top: 20px;
+}
+
+.leader-img {
+  height: 10rem;
+  width: 10rem;
+  margin: 0 auto;
+  border-radius: 9999px; /* Circle */
+  object-cover: cover;
+  border: 4px solid #f3f4f6;
+  transition: transform 0.3s ease;
+}
+
+.leader-img:hover {
+  transform: scale(1.05);
+  border-color: #1e3a8a;
+}
+
+.home-leadership__card {
+  text-align: center;
+  padding: 1rem;
+}
+
+.home-leadership__name {
+  font-weight: 700;
+  margin-top: 1rem;
+  color: #1f2937;
+}
+
+.home-leadership__role {
+  font-size: 0.8rem;
+  color: #ef4444; /* Red color for roles */
+  font-weight: 600;
+}
+
+/* GM Featured Style */
+.gm-featured-section {
+  background-image: linear-gradient(to right, #f8fafc, #ffffff);
+}
