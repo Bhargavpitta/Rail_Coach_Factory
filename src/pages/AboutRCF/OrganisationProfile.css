@@ -1,0 +1,74 @@
+.org-page{
+  padding:20px;
+}
+
+.breadcrumb{
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.org-layout{
+  display:flex;
+  gap:25px;
+}
+
+/* Sidebar color changed */
+.about-sidebar{
+  width:260px;
+  background:#f4f7fb;
+  border-right:2px solid #d0d8e8;
+}
+
+.about-sidebar ul{
+  list-style:none;
+  padding:0;
+}
+
+.about-sidebar li{
+  padding:10px 15px;
+  border-bottom:1px solid #ddd;
+}
+
+.about-sidebar li a{
+  text-decoration:none;
+  color:#333;
+}
+
+.about-sidebar .active{
+  background:#2c5aa0;
+  color:white;
+  font-weight:600;
+}
+
+/* Content */
+.org-content{
+  flex:1;
+}
+
+.org-content h1{
+  color:#1c3d73;
+  margin-bottom:20px;
+}
+
+.org-content section{
+  margin-bottom:25px;
+}
+
+.org-content h2{
+  color:#2c5aa0;
+  border-left:4px solid #2c5aa0;
+  padding-left:10px;
+  margin-bottom:10px;
+}
+
+.org-content p{
+  line-height:1.7;
+}
+
+.org-content ul{
+  padding-left:20px;
+}
+
+.org-content li{
+  margin-bottom:6px;
+}
