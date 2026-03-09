@@ -15,7 +15,7 @@ import Certificates from "./pages/AboutRCF/Certificates";
 import OrganisationProfile from "./pages/AboutRCF/OrganisationProfile";
 import GeneralManagers from "./pages/AboutRCF/GeneralManagers";
 import AboutRCF from "./components/navitems/AboutRCF";
-import Aboutrcf from "./pages/AboutRCF/AboutRCF"
+import Aboutrcf from "./pages/AboutRCF/Aboutrcf"
 import TenderInfo from "./components/navitems/TenderInfo";
 import ContactUs from "./components/navitems/ContactUs";
 import Products from "./components/navitems/Products";
@@ -23,6 +23,14 @@ import StaffCorner from "./components/navitems/StaffCorner";
 import Vendor from "./components/navitems/Vendor";
 import OrganisationStructure from "./pages/AboutRCF/OrganisationStructure";
 import Environment from "./pages/AboutRCF/Environment";
+import AnnualReports from "./pages/AboutRCF/AnnualReports";
+import PhotoGallery from "./pages/AboutRCF/PhotoGallery";
+import Holidays from "./pages/AboutRCF/Holidays";
+import ResidentsNeed from "./pages/AboutRCF/ResidentsNeed";
+import StaffWelfare from "./pages/AboutRCF/StaffWelfare";
+import Rajbhasha from "./pages/AboutRCF/Rajbhasha";
+import PortalPolicies from "./pages/AboutRCF/PortalPolicies";
+import ImportantStats from "./pages/AboutRCF/ImportantStats";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -45,7 +53,15 @@ const App = () => (
                 <Route path="/about/general-managers" element={<GeneralManagers />} />
                 <Route path="/about/organisationstructure" element={<OrganisationStructure />} />
                  <Route path="/about/environment" element={<Environment />} />
-                
+                <Route path="/about/annualreports" element={<AnnualReports />} />
+                <Route path="/about/gallery" element={<PhotoGallery />} />
+                <Route path="/about/holidays" element={<Holidays />} />
+                <Route path="/about/residentsneed" element={<ResidentsNeed />} />
+                <Route path="/about/staff-welfare" element={<StaffWelfare />} />
+                 <Route path="/about/rajbhasha" element={<Rajbhasha />} />
+                  <Route path="/about/policies" element={<PortalPolicies />} />
+                  <Route path="/about/statistics" element={<ImportantStats />} />
+
 
                 <Route path="/departments" element={<Departments />} />
                 <Route path="/tenders" element={<TenderInfo />} />

@@ -1,12 +1,18 @@
+/* ============================= */
+/* Base Styles (Mobile First)   */
+/* ============================= */
+
 .gm-page-container {
-  padding: 10px;
+  padding: 12px;
 }
 
 /* Breadcrumb */
+
 .breadcrumb {
-  font-size: 0.85rem;
-  margin-bottom: 25px;
+  font-size: 0.8rem;
+  margin-bottom: 18px;
   color: #6c757d;
+  flex-wrap: wrap;
 }
 
 .breadcrumb a {
@@ -20,93 +26,101 @@
 }
 
 /* Titles */
+
 .gm-main-title {
   color: hsl(228, 55%, 45%);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   border-bottom: 3px solid #ffc107;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
+  padding-bottom: 8px;
+  margin-bottom: 22px;
 }
 
 .section-sub-title {
   color: hsl(228, 55%, 45%);
-  font-size: 1.25rem;
-  margin: 30px 0 15px;
+  font-size: 1rem;
+  margin: 22px 0 12px;
   text-transform: uppercase;
   border-left: 5px solid hsl(228, 55%, 45%);
-  padding-left: 15px;
+  padding-left: 12px;
 }
 
 /* Featured GM Box */
+
 .featured-gm-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #f8f9fa;
   border: 1px solid #dee2e6;
-  padding: 30px;
-  max-width: 400px;
-  margin: 0 auto 40px;
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto 30px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .gm-photo-wrapper img {
-  width: 200px;
-  height: 250px;
+  width: 150px;
+  height: 190px;
   object-fit: cover;
   border: 5px solid white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .gm-name {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #333;
 }
 
 .gm-designation {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #666;
   font-style: italic;
 }
 
 /* Table Styling */
+
 .rcf-styled-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  overflow-x: auto;
+  display: block;
 }
 
 .rcf-styled-table th {
   background-color: hsl(228, 55%, 45%);
   color: white;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ddd;
+  font-size: 0.85rem;
 }
 
 .rcf-styled-table td {
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ddd;
   text-align: center;
+  font-size: 0.85rem;
 }
 
 .text-left-name {
   text-align: left !important;
-  padding-left: 20px !important;
+  padding-left: 15px !important;
 }
 
 .row-highlight {
-  background-color: #fff9e6; /* Highlight current row */
+  background-color: #fff9e6;
   font-weight: 600;
 }
 
 /* Gallery */
+
 .gallery-wrapper {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 8px;
   background: white;
 }
 
@@ -114,4 +128,111 @@
   width: 100%;
   height: auto;
   display: block;
+}
+
+
+/* ============================= */
+/* Tablet (768px and up)        */
+/* ============================= */
+
+@media (min-width: 768px) {
+
+  .gm-page-container {
+    padding: 20px;
+  }
+
+  .breadcrumb {
+    font-size: 0.85rem;
+  }
+
+  .gm-main-title {
+    font-size: 1.8rem;
+  }
+
+  .section-sub-title {
+    font-size: 1.1rem;
+  }
+
+  .featured-gm-box {
+    max-width: 420px;
+    padding: 25px;
+  }
+
+  .gm-photo-wrapper img {
+    width: 180px;
+    height: 220px;
+  }
+
+  .gm-name {
+    font-size: 1.3rem;
+  }
+
+  .rcf-styled-table {
+    display: table;
+  }
+
+}
+
+
+/* ============================= */
+/* Laptop (1024px and up)       */
+/* ============================= */
+
+@media (min-width: 1024px) {
+
+  .gm-page-container {
+    padding: 28px;
+  }
+
+  .gm-main-title {
+    font-size: 2rem;
+  }
+
+  .section-sub-title {
+    font-size: 1.2rem;
+  }
+
+  .featured-gm-box {
+    flex-direction: column;
+    max-width: 450px;
+  }
+
+  .gm-photo-wrapper img {
+    width: 200px;
+    height: 250px;
+  }
+
+  .rcf-styled-table th,
+  .rcf-styled-table td {
+    font-size: 0.95rem;
+  }
+
+}
+
+
+/* ============================= */
+/* Desktop (1280px and up)      */
+/* ============================= */
+
+@media (min-width: 1280px) {
+
+  .gm-page-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+  }
+
+  .gm-main-title {
+    font-size: 2.2rem;
+  }
+
+  .section-sub-title {
+    font-size: 1.25rem;
+  }
+
+  .featured-gm-box {
+    max-width: 500px;
+    padding: 30px;
+  }
+
 }

@@ -1,0 +1,231 @@
+@import "../AboutRCF/shared.css";
+
+.residents-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* Summary Banner */
+.residents-summary-banner {
+  background: linear-gradient(135deg, var(--rcf-navy), var(--rcf-blue));
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  border-bottom: 4px solid var(--rcf-orange);
+}
+
+.residents-summary-banner__icon {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.residents-summary-banner__title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: #fff;
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.residents-summary-banner__text {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+/* Facility Grid */
+.residents-facility-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.residents-facility-card {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-top: 3px solid;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.residents-facility-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.residents-facility-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: var(--space-md);
+}
+
+.residents-facility-card__title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--rcf-navy);
+  margin-bottom: var(--space-sm);
+}
+
+.residents-facility-card__desc {
+  font-size: 12.5px;
+  color: var(--rcf-gray-600);
+  line-height: 1.6;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+/* Section text */
+.residents-section-text {
+  font-size: 14px;
+  color: var(--rcf-gray-700);
+  margin: 0 0 var(--space-lg) 0;
+  line-height: 1.6;
+  font-family: var(--font-body);
+}
+
+/* Schools Grid */
+.residents-schools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.residents-school-card {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+}
+
+.residents-school-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.residents-school-card__header {
+  background: linear-gradient(135deg, var(--rcf-navy), var(--rcf-blue));
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.residents-school-card__num {
+  font-size: 22px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.25);
+  font-family: var(--font-display);
+}
+
+.residents-school-card__icon {
+  font-size: 24px;
+}
+
+.residents-school-card__name {
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  color: var(--rcf-navy);
+  padding: var(--space-md) var(--space-lg) var(--space-sm);
+  margin: 0;
+  border-bottom: 1px solid var(--rcf-gray-50);
+}
+
+.residents-school-card__details {
+  padding: var(--space-sm) var(--space-lg) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.residents-school-card__detail {
+  font-size: 12.5px;
+  color: var(--rcf-gray-700);
+  font-family: var(--font-body);
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.residents-school-card__detail-label {
+  font-weight: 700;
+  color: var(--rcf-blue);
+  flex-shrink: 0;
+  min-width: 72px;
+}
+
+/* Banks Grid */
+.residents-banks-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+}
+
+.residents-bank-card {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.residents-bank-card:hover {
+  border-color: var(--rcf-blue);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.residents-bank-card__icon {
+  font-size: 28px;
+}
+
+.residents-bank-card__name {
+  font-size: 12px;
+  color: var(--rcf-gray-700);
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .residents-facility-grid { grid-template-columns: repeat(2, 1fr); }
+  .residents-banks-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .residents-schools-grid { grid-template-columns: 1fr; }
+  .residents-summary-banner { flex-direction: column; gap: var(--space-md); }
+  .residents-summary-banner__icon { font-size: 36px; }
+}
+
+@media (max-width: 600px) {
+  .residents-facility-grid { grid-template-columns: 1fr 1fr; }
+  .residents-banks-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 400px) {
+  .residents-facility-grid { grid-template-columns: 1fr; }
+}

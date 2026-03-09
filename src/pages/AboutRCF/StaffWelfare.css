@@ -1,0 +1,210 @@
+@import "../AboutRCF/shared.css";
+
+.welfare-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* Amenities Grid */
+.welfare-amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.welfare-amenity-card {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border-top: 3px solid transparent;
+}
+
+.welfare-amenity-card:hover {
+  border-top-color: var(--rcf-orange);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.welfare-amenity-card__icon {
+  font-size: 36px;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.welfare-amenity-card__title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--rcf-navy);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.welfare-amenity-card__desc {
+  font-size: 12.5px;
+  color: var(--rcf-gray-600);
+  line-height: 1.6;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+/* Table */
+.welfare-table-wrapper {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.welfare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+}
+
+.welfare-table thead tr {
+  background: var(--rcf-navy);
+  color: #fff;
+}
+
+.welfare-table th {
+  padding: 13px 14px;
+  text-align: left;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.welfare-table td {
+  padding: 13px 14px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--rcf-gray-50);
+  color: var(--rcf-gray-700);
+  vertical-align: top;
+}
+
+.welfare-table__row:last-child td {
+  border-bottom: none;
+}
+
+.welfare-table__row:nth-child(even) td {
+  background: #f8fafc;
+}
+
+.welfare-table__row:hover td {
+  background: #eff6ff;
+}
+
+.welfare-table__row--expanded td {
+  background: #eff6ff !important;
+  border-bottom: none;
+}
+
+.welfare-table__sno {
+  width: 48px;
+  text-align: center;
+  color: var(--rcf-gray-400);
+  font-size: 12px;
+}
+
+.welfare-table__name {
+  font-weight: 600;
+  color: var(--rcf-navy);
+}
+
+.welfare-table__location {
+  font-size: 12.5px;
+  color: var(--rcf-gray-600);
+}
+
+.welfare-table__head {
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.welfare-table__expand-btn {
+  background: none;
+  border: 1px solid var(--rcf-blue);
+  color: var(--rcf-blue);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.welfare-table__expand-btn:hover {
+  background: var(--rcf-blue);
+  color: #fff;
+}
+
+/* Members Panel */
+.welfare-table__members-row td {
+  background: #f0f7ff !important;
+  border-bottom: 2px solid #bfdbfe;
+  padding: 0;
+}
+
+.welfare-members-panel {
+  padding: var(--space-lg) var(--space-xl);
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.welfare-members-panel__label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--rcf-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-body);
+}
+
+.welfare-members-list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.welfare-members-list li {
+  font-size: 13px;
+  color: var(--rcf-gray-700);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .welfare-amenities-grid { grid-template-columns: repeat(2, 1fr); }
+  .welfare-table th:nth-child(4),
+  .welfare-table td:nth-child(4) { display: none; }
+}
+
+@media (max-width: 768px) {
+  .welfare-table th:nth-child(3),
+  .welfare-table td:nth-child(3) { display: none; }
+}
+
+@media (max-width: 600px) {
+  .welfare-amenities-grid { grid-template-columns: 1fr 1fr; }
+  .welfare-table { font-size: 12px; }
+}
