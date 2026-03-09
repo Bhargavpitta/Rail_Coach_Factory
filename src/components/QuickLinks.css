@@ -1,30 +1,52 @@
+/* ============================= */
+/* Base Styles (Mobile First)   */
+/* ============================= */
+
 .quick-links-container {
   padding: 20px 0;
-  background-color: #f8fafc;
+  background-color: #ffffff;
   border-bottom: 1px solid #e2e8f0;
   width: 100%;
 }
 
+/* Heading */
+
 .quick-links-heading {
+  position: relative;
   text-align: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #003366;
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
+
+.quick-links-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #f59e0b;
+  border-radius: 2px;
+}
+
+/* Quick Links Row */
 
 .quick-links-row {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 12px;
-  flex-wrap: nowrap; /* Forces single line */
-  overflow-x: auto; /* Allows scrolling on very small screens instead of breaking line */
-  padding: 10px;
-  -ms-overflow-style: none;  /* Hide scrollbar for IE/Edge */
-  scrollbar-width: none;  /* Hide scrollbar for Firefox */
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px 15px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Hide scrollbar for Chrome/Safari */
@@ -32,26 +54,23 @@
   display: none;
 }
 
+/* Quick Link Button */
+
 .quick-link-item {
   display: flex;
-  flex-direction: row; /* Icon and text side by side */
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
+  gap: 6px;
+  padding: 7px 14px;
   background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
   color: white;
   text-decoration: none;
   border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  white-space: nowrap; /* Prevents text wrapping */
+  white-space: nowrap;
   transition: transform 0.2s, background 0.2s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Special styling for Public Grievances to match the gold button in your image */
-.quick-link-item:nth-child(6) {
-  background: linear-gradient(180deg, #3b82f6  0%, #3b82f6  100%);
 }
 
 .quick-link-item:hover {
@@ -63,36 +82,92 @@
 .quick-link-icon {
   display: flex;
   align-items: center;
+  font-size: 0.9rem;
 }
 
-/* Container to give some breathing room */
-.quick-links-container {
-  padding: 30px 0 20px 0;
-  background-color: #ffffff; 
-  width: 100%;
+/* Special styling (kept same as your code) */
+.quick-link-item:nth-child(6) {
+  background: linear-gradient(180deg, #3b82f6 0%, #3b82f6 100%);
 }
 
-.quick-links-heading {
-  position: relative;
-  text-align: center;
-  font-size: 1.5rem; /* Larger, clearer font */
-  font-weight: 800; /* Extra bold */
-  color: #003366; /* Deep Navy Blue (Indian Railways branding) */
-  margin-bottom: 25px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+/* ============================= */
+/* Tablet (768px+)              */
+/* ============================= */
+
+@media (min-width: 768px) {
+
+  .quick-links-container {
+    padding: 25px 0;
+  }
+
+  .quick-links-heading {
+    font-size: 1.35rem;
+  }
+
+  .quick-links-row {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .quick-link-item {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
 }
 
-/* The accent line under the heading */
-.quick-links-heading::after {
-  content: "";
-  position: absolute;
-  bottom: -8px; /* Gap between text and line */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px; /* Width of the underline */
-  height: 4px; /* Thickness */
-  background-color: #f59e0b; /* Gold/Amber accent to match the Grievances button */
-  border-radius: 2px;
+
+/* ============================= */
+/* Laptop (1024px+)             */
+/* ============================= */
+
+@media (min-width: 1024px) {
+
+  .quick-links-container {
+    padding: 30px 0;
+  }
+
+  .quick-links-heading {
+    font-size: 1.45rem;
+  }
+
+  .quick-link-item {
+    font-size: 0.9rem;
+    padding: 9px 18px;
+  }
+
+  .quick-links-row {
+    gap: 14px;
+  }
+
+}
+
+
+/* ============================= */
+/* Desktop (1280px+)            */
+/* ============================= */
+
+@media (min-width: 1280px) {
+
+  .quick-links-container {
+    padding: 35px 0;
+  }
+
+  .quick-links-heading {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+
+  .quick-link-item {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .quick-links-row {
+    max-width: 1200px;
+    margin: auto;
+    gap: 16px;
+  }
+
 }

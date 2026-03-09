@@ -1,6 +1,6 @@
 /* --- Root Container Transitions --- */
 .structure-container {
-  padding: 10px;
+  padding: 12px;
   animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -11,16 +11,17 @@
 
 /* --- Breadcrumb Styling --- */
 .breadcrumb {
-  font-size: 0.85rem;
-  margin-bottom: 25px;
+  font-size: 0.8rem;
+  margin-bottom: 18px;
   color: #64748b;
   display: flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 6px;
   align-items: center;
 }
 
 .breadcrumb-link {
-  color: #1e3a8a; /* Deep Navy */
+  color: #1e3a8a;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
@@ -33,37 +34,37 @@
 
 /* --- Header & Title --- */
 .page-header-section {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   position: relative;
 }
 
 .page-main-title {
-  color: #1e3a8a ; /* Slate Dark */
-  font-size: 2.5rem;
+  color: #1e3a8a;
+  font-size: 1.7rem;
   font-weight: 800;
-  letter-spacing: -0.025em;
-  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
 }
 
 .gold-separator {
-  width: 80px;
-  height: 5px;
-  background: linear-gradient(90deg, #eab308 0%, #fbbf24 100%); /* Premium Gold */
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #eab308 0%, #fbbf24 100%);
   border-radius: 10px;
 }
 
 /* --- Document List Grid --- */
 .document-list-wrapper {
   display: grid;
-  gap: 16px;
-  margin-top: 20px;
+  gap: 14px;
+  margin-top: 18px;
 }
 
 .document-card-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
@@ -79,14 +80,14 @@
 
 .doc-meta {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .doc-icon-circle {
   background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,31 +97,33 @@
 
 .doc-text h3 {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #1e293b;
 }
 
 .doc-text p {
   margin: 4px 0 0 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #64748b;
   line-height: 1.5;
 }
 
-/* --- Modern Action Buttons --- */
+/* --- Action Buttons --- */
 .doc-action-group {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .btn-action-view {
   background-color: #f8fafc;
   color: #1e3a8a;
   border: 1.5px solid #e2e8f0;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 8px;
   font-weight: 600;
+  font-size: 0.85rem;
   transition: all 0.2s;
 }
 
@@ -131,16 +134,16 @@
 }
 
 .btn-action-download {
-  background: #0f172a; /* Sleek Black/Navy */
+  background: #0f172a;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 8px;
   font-weight: 600;
+  font-size: 0.85rem;
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 8px;
-  transition: opacity 0.2s;
+  gap: 6px;
 }
 
 .btn-action-download:hover {
@@ -153,10 +156,10 @@
   box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
 }
 
-/* --- Professional PDF Viewer --- */
+/* --- PDF Viewer --- */
 .integrated-pdf-viewer {
-  margin-top: 40px;
-  border-radius: 16px;
+  margin-top: 30px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid #cbd5e1;
   background: #f1f5f9;
@@ -165,9 +168,11 @@
 
 .viewer-controls {
   background: #0f172a;
-  padding: 14px 24px;
+  padding: 12px 16px;
   color: white;
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -176,17 +181,17 @@
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .viewer-label::before {
   content: "";
   width: 8px;
   height: 8px;
-  background: #22c55e; /* Online Status Dot */
+  background: #22c55e;
   border-radius: 50%;
 }
 
@@ -194,18 +199,109 @@
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 6px;
   font-weight: 500;
-  transition: background 0.2s;
 }
 
 .btn-close-viewer:hover {
-  background: #ef4444; /* Alert Red on hover */
+  background: #ef4444;
   border-color: #ef4444;
 }
 
 .pdf-frame-embed {
   border: none;
   background: #ffffff;
+  width: 100%;
+  height: 400px;
+}
+
+/* ============================= */
+/* Tablet (768px+)              */
+/* ============================= */
+
+@media (min-width: 768px) {
+
+  .structure-container {
+    padding: 20px;
+  }
+
+  .page-main-title {
+    font-size: 2rem;
+  }
+
+  .doc-icon-circle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .document-card-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .doc-action-group {
+    flex-wrap: nowrap;
+  }
+
+  .pdf-frame-embed {
+    height: 500px;
+  }
+
+}
+
+/* ============================= */
+/* Laptop (1024px+)             */
+/* ============================= */
+
+@media (min-width: 1024px) {
+
+  .structure-container {
+    padding: 30px;
+  }
+
+  .page-main-title {
+    font-size: 2.3rem;
+  }
+
+  .doc-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .doc-text p {
+    font-size: 0.9rem;
+  }
+
+  .pdf-frame-embed {
+    height: 600px;
+  }
+
+}
+
+/* ============================= */
+/* Desktop (1280px+)            */
+/* ============================= */
+
+@media (min-width: 1280px) {
+
+  .structure-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+  }
+
+  .page-main-title {
+    font-size: 2.5rem;
+  }
+
+  .gold-separator {
+    width: 80px;
+    height: 5px;
+  }
+
+  .pdf-frame-embed {
+    height: 700px;
+  }
+
 }
