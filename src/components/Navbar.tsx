@@ -17,17 +17,17 @@ const Navbar = () => {
         { label: "About RCF", path: "/about/about-rcf" },
         { label: "Organisation Structure", path: "/about/organisationstructure" },
         { label: "Environment Management at RCF", path: "/about/environment" },
-        { label: "Annual Report", path: "/about/annual-report" },
+        { label: "Annual Report", path: "/about/annualreports" },
         { label: "Photo Gallery", path: "/about/gallery" },
-        { label: "Resident's Need", path: "/about/residents-need" },
+        { label: "Resident's Need", path: "/about/residentsneed" },
         { label: "Holidays", path: "/about/holidays" },
         { label: "Staff Welfare Amenities", path: "/about/staff-welfare" },
         { label: "Rajbhasha", path: "/about/rajbhasha" },
-        { 
-          label: "Important Statistics and Achievements", 
+        {
+          label: "Important Statistics and Achievements",
           path: "/about/statistics",
           subDropdown: [
-            { label: "Important Statistics", path: "/about/statistics/stats" },
+            { label: "Important Statistics", path: "/about/statistics" },
             { label: "Major Milestones", path: "/about/statistics/milestones" },
             { label: "Achievements (Previous Years)", path: "/about/statistics/prev-achievements" }
           ]
@@ -40,15 +40,15 @@ const Navbar = () => {
       to: "/departments", label: "Departments",
       dropdown: [
         { label: "News & Announcements", path: "/departments/news" },
-        { 
-          label: "All Departments", 
+        {
+          label: "All Departments",
           path: "/departments/all",
           subDropdown: [
             { label: "Administration", path: "/dept/admin" },
             { label: "Accounts", path: "/dept/accounts" },
             { label: "Civil", path: "/dept/civil" },
-            { 
-              label: "Design", 
+            {
+              label: "Design",
               path: "/dept/design",
               subDropdown: [
                 { label: "Coach Alteration Instructions", path: "/dept/design/cai" },
@@ -58,27 +58,34 @@ const Navbar = () => {
               ]
             },
             { label: "Electrical", path: "/dept/electrical" },
-            { label: "IT", path: "/dept/it" },
+            { label: "Information Technology", path: "/dept/it" },
             { label: "Medical", path: "/dept/medical" },
             { label: "Mechanical", path: "/dept/mechanical" },
             { label: "Personnel", path: "/dept/personnel" },
             { label: "Quality", path: "/dept/quality" },
-            { label: "S & T", path: "/dept/st" },
+            { label: "Signal & Telecommunication", path: "/dept/st" },
             { label: "Stores", path: "/dept/stores" },
             { label: "Security", path: "/dept/security" },
             { label: "Sports", path: "/dept/sports" },
-            { label: "Technical Training Centre", path: "/dept/ttc" },
-            { label: "Vigilance", path: "/dept/vigilance" }
+            {
+              label: "Technical Training Centre",
+              path: "/dept/ttc" ,
+              subDropdown: [
+                { label: "Technical Training Calendar", path: "/dept/ttc/calendar" },
+                { label: "Recruitment Info", path: "/dept/ttc/recruitment" }
+              ]
+            },
+
           ]
         },
-        { 
-          label: "Quality", 
+        {
+          label: "Quality",
           path: "/departments/quality",
           subDropdown: [
             { label: "Warranty", path: "/quality/warranty" },
-            { label: "Rolling Stock Warranty", path: "/quality/rolling-stock" },
+            { label: "Rolling Stock Warranty Certificate", path: "/quality/rolling-stock" },
             { label: "LHB Spares", path: "/quality/lhb" },
-            { label: "Quality Policy", path: "/quality/policy" }
+            
           ]
         },
         { label: "Annual Immovable Property Returns", path: "/departments/property" },
@@ -103,8 +110,8 @@ const Navbar = () => {
         { label: "Tenders", path: "/tenders" },
         { label: "Expression of Interest", path: "/tenders/eoi" },
         { label: "View Awarded Tenders", path: "/tenders/awarded" },
-        { 
-          label: "Surplus Items", 
+        {
+          label: "Surplus Items",
           path: "/tenders/surplus",
           subDropdown: [
             { label: "Stores", path: "/tenders/surplus/stores" },
@@ -124,16 +131,16 @@ const Navbar = () => {
         { label: "Vendor Registration for Tender", path: "/vendor/registration" },
         { label: "Vendor Login", path: "/vendor/login" },
         { label: "Vendor Development", path: "/vendor/development" },
-        { 
-          label: "Vendor Directory", 
+        {
+          label: "Vendor Directory",
           path: "/vendor/directory",
           subDropdown: [
             { label: "Mechanical", path: "/vendor/dir/mech" },
             { label: "Electrical", path: "/vendor/dir/elec" }
           ]
         },
-        { 
-          label: "Electrical Design Specs", 
+        {
+          label: "Electrical Design Specs",
           path: "/vendor/specs",
           subDropdown: [
             { label: "EDTS", path: "/vendor/specs/edts" },
@@ -165,8 +172,8 @@ const Navbar = () => {
         { label: "CBT for NG Staff", path: "/staff/cbt" },
         { label: "Secret Ballot Election-2024", path: "/staff/election" },
         { label: "Recruitments", path: "/staff/recruitments" },
-        { 
-          label: "Employee Seniority List", 
+        {
+          label: "Employee Seniority List",
           path: "/staff/seniority",
           subDropdown: [
             { label: "Accounts", path: "/staff/seniority/accounts" },
@@ -178,8 +185,8 @@ const Navbar = () => {
             { label: "Others", path: "/staff/seniority/others" }
           ]
         },
-        { 
-          label: "Compassionate Ground", 
+        {
+          label: "Compassionate Ground",
           path: "/staff/compassionate",
           subDropdown: [
             { label: "Pending Status", path: "/staff/comp/status" },
@@ -215,8 +222,8 @@ const Navbar = () => {
         <ul className="main-nav__list">
           {links.map((link, index) => (
             <li key={index} className="main-nav__item">
-              <Link 
-                to={link.to} 
+              <Link
+                to={link.to}
                 className={`main-nav__link ${location.pathname === link.to ? "main-nav__link--active" : ""}`}
               >
                 {link.label}

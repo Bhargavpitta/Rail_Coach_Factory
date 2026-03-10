@@ -30,6 +30,14 @@ import AwardedTenders from "./pages/Tenders/AwardedTenders";
 import SurplusItems from "./pages/Tenders/SurplusItems";
 import StoreSupplyContracts from "./pages/Tenders/StoreSupplyContracts";
 import BidDocument from "./pages/Tenders/BidDocument";
+import AnnualReports from "./pages/AboutRCF/AnnualReports";
+import PhotoGallery from "./pages/AboutRCF/PhotoGallery";
+import Holidays from "./pages/AboutRCF/Holidays";
+import ResidentsNeed from "./pages/AboutRCF/ResidentsNeed";
+import StaffWelfare from "./pages/AboutRCF/StaffWelfare";
+import Rajbhasha from "./pages/AboutRCF/Rajbhasha";
+import PortalPolicies from "./pages/AboutRCF/PortalPolicies";
+import ImportantStats from "./pages/AboutRCF/ImportantStats";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -52,7 +60,15 @@ const App = () => (
                 <Route path="/about/general-managers" element={<GeneralManagers />} />
                 <Route path="/about/organisationstructure" element={<OrganisationStructure />} />
                  <Route path="/about/environment" element={<Environment />} />
-                
+                <Route path="/about/annualreports" element={<AnnualReports />} />
+                <Route path="/about/gallery" element={<PhotoGallery />} />
+                <Route path="/about/holidays" element={<Holidays />} />
+                <Route path="/about/residentsneed" element={<ResidentsNeed />} />
+                <Route path="/about/staff-welfare" element={<StaffWelfare />} />
+                 <Route path="/about/rajbhasha" element={<Rajbhasha />} />
+                  <Route path="/about/policies" element={<PortalPolicies />} />
+                  <Route path="/about/statistics" element={<ImportantStats />} />
+
 
                 <Route path="/departments" element={<Departments />} />
 

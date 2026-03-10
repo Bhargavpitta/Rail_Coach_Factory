@@ -1,0 +1,282 @@
+@import "../AboutRCF/shared.css";
+
+.holidays-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* Year Bar */
+.holidays-year-bar {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.holidays-year-bar__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--rcf-navy);
+}
+
+.holidays-year-tabs {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.holidays-year-tab {
+  padding: 9px 20px;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border: 2px solid var(--rcf-gray-200);
+  background: #fff;
+  color: var(--rcf-gray-600);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.holidays-year-tab:hover {
+  border-color: var(--rcf-blue);
+  color: var(--rcf-blue);
+}
+
+.holidays-year-tab--active {
+  background: var(--rcf-blue);
+  border-color: var(--rcf-blue);
+  color: #fff;
+  box-shadow: var(--shadow-blue);
+}
+
+/* Summary Cards */
+.holidays-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.holidays-summary-card {
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base);
+}
+
+.holidays-summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.holidays-summary-card--blue  { background: #eff6ff; border: 1px solid #bfdbfe; }
+.holidays-summary-card--green { background: #f0fdf4; border: 1px solid #bbf7d0; }
+.holidays-summary-card--amber { background: #fffbeb; border: 1px solid #fde68a; }
+
+.holidays-summary-card__icon { font-size: 28px; }
+
+.holidays-summary-card--blue  .holidays-summary-card__value { color: var(--rcf-blue); }
+.holidays-summary-card--green .holidays-summary-card__value { color: #059669; }
+.holidays-summary-card--amber .holidays-summary-card__value { color: #d97706; }
+
+.holidays-summary-card__value {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.holidays-summary-card__label {
+  font-size: 12.5px;
+  color: var(--rcf-gray-600);
+  font-family: var(--font-body);
+}
+
+/* Downloads */
+.holidays-downloads {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.holidays-download-btns {
+  display: flex;
+  gap: var(--space-md);
+  flex-shrink: 0;
+}
+
+.holidays-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.holidays-dl-btn--primary {
+  background: var(--rcf-blue);
+  color: #fff;
+  box-shadow: var(--shadow-blue);
+}
+
+.holidays-dl-btn--primary:hover {
+  background: var(--rcf-navy);
+  text-decoration: none;
+  color: #fff;
+}
+
+.holidays-dl-btn--outline {
+  border: 2px solid var(--rcf-blue);
+  color: var(--rcf-blue);
+  background: transparent;
+}
+
+.holidays-dl-btn--outline:hover {
+  background: var(--rcf-blue);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Legend */
+.holidays-legend {
+  display: flex;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--rcf-gray-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--rcf-gray-100);
+}
+
+.holidays-legend__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 13px;
+  color: var(--rcf-gray-700);
+  font-family: var(--font-body);
+}
+
+.holidays-legend__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Table */
+.holidays-table-wrapper {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.holidays-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+}
+
+.holidays-table thead tr {
+  background: var(--rcf-navy);
+  color: #fff;
+}
+
+.holidays-table th {
+  padding: 13px 16px;
+  text-align: left;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.holidays-table td {
+  padding: 12px 16px;
+  font-size: 13.5px;
+  border-bottom: 1px solid var(--rcf-gray-50);
+  color: var(--rcf-gray-700);
+}
+
+.holidays-table__row:last-child td {
+  border-bottom: none;
+}
+
+.holidays-table__row--national { background: #fffffffd; }
+.holidays-table__row--restricted { background: #f0fdf4; }
+.holidays-table__row--optional { background: #fffbeb; }
+
+.holidays-table__row:hover td {
+  background: #f0f4ff !important;
+}
+
+.holidays-table__sno {
+  color: var(--rcf-gray-400);
+  font-size: 12px;
+  width: 48px;
+  text-align: center;
+}
+
+.holidays-table__date-text {
+  font-weight: 700;
+  color: var(--rcf-navy);
+}
+
+.holidays-table__day {
+  color: var(--rcf-gray-600);
+  font-size: 13px;
+}
+
+.holidays-table__name {
+  font-weight: 600;
+}
+
+.holidays-table__badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .holidays-summary { grid-template-columns: repeat(3, 1fr); }
+  .holidays-table th:nth-child(2),
+  .holidays-table td:nth-child(2) { display: none; }
+}
+
+@media (max-width: 600px) {
+  .holidays-summary { grid-template-columns: repeat(2, 1fr); }
+  .holidays-year-bar { flex-direction: column; align-items: flex-start; }
+  .holidays-table th:nth-child(5),
+  .holidays-table td:nth-child(5) { display: none; }
+  .holidays-downloads { flex-direction: column; align-items: flex-start; }
+  .holidays-download-btns { flex-direction: column; width: 100%; }
+}

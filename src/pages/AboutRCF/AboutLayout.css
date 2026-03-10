@@ -1,82 +1,186 @@
-/* Container takes full screen width and height minus navbar */
+/* ===== LAYOUT ===== */
+
 .official-layout {
   display: flex;
-  width: 100%;
-  min-height: calc(100vh - 45px); /* Adjusted for Navbar height */
-  background-color: #f0f2f5;
+  min-height: 100vh;
+  background: #f4f6f9;
 }
 
-/* SIDEBAR STYLING */
+/* ===== SIDEBAR ===== */
+
 .official-sidebar {
-  width: 300px;
-  background-color: #ffffff;
-  border-right: 2px solid #e0e0e0;
-  flex-shrink: 0;
+  width: 260px;
+  background: #1f3c63;
+  color: white;
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
 }
 
 .sidebar-brand {
-  background-color: hsl(228, 55%, 45%); /* Your Navbar Blue */
-  color: #ffffff;
-  padding: 18px 20px;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 18px;
+  background: #162c4a;
   text-align: center;
-  border-bottom: 3px solid #ffc107; /* Official Gold Stripe */
+  letter-spacing: 1px;
 }
+
+/* ===== MENU ===== */
 
 .sidebar-menu {
   display: flex;
   flex-direction: column;
 }
 
+.sidebar-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* MAIN ITEM */
+
 .sidebar-item {
-  padding: 14px 20px;
+  padding: 12px 18px;
   text-decoration: none;
-  color: #333333;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border-bottom: 1px solid #f0f0f0;
+  color: white;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   transition: all 0.2s ease;
-  line-height: 1.4;
+  cursor: pointer;
 }
 
 .sidebar-item:hover {
-  background-color: #f8f9ff;
-  color: hsl(228, 55%, 45%);
-  padding-left: 25px;
+  background: #2a5185;
 }
 
-/* EXACT CLICKED COLOR (BLUE) */
+/* ACTIVE LINK */
+
 .sidebar-item.is-active {
-  background-color: hsl(228, 55%, 45%) !important;
-  color: #ffffff !important;
+  background: #f58220;
+  color: white;
   font-weight: 600;
-  border-left: 6px solid #ffc107; /* Gold indicator when clicked */
 }
 
-/* CONTENT AREA STYLING */
+/* ===== DROPDOWN ===== */
+
+.dropdown::after {
+  content: "▼";
+  float: right;
+  font-size: 10px;
+}
+
+.dropdown.open::after {
+  content: "▲";
+}
+
+/* ===== SUB MENU ===== */
+
+.sub-menu {
+  background: #f1f4f8;
+}
+
+.sidebar-subitem {
+  display: block;
+  padding: 10px 25px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #e4e8ee;
+  transition: all 0.2s ease;
+}
+
+.sidebar-subitem:hover {
+  background: #dde6f3;
+}
+
+.sidebar-subitem.is-active {
+  background: #f58220;
+  color: white;
+  font-weight: 500;
+}
+
+/* ===== MAIN CONTENT ===== */
+
 .official-main {
-  flex-grow: 1;
-  padding: 40px;
-  background-color: #ffffff;
-  overflow-y: auto;
+  flex: 1;
+  padding: 30px;
 }
 
 .content-inner {
-  max-width: 1000px;
-  margin: 0 auto;
+  background: white;
+  padding: 25px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* Content Headings */
-.content-inner h2 {
-  color: hsl(228, 55%, 45%);
-  font-size: 1.8rem;
-  border-bottom: 2px solid #eeeeee;
-  padding-bottom: 15px;
-  margin-bottom: 25px;
-  font-weight: 700;
+/* ============================= */
+/* RESPONSIVENESS */
+/* ============================= */
+
+/* ===== MOBILE (320px) ===== */
+
+@media (max-width: 320px) {
+
+  .official-layout {
+    flex-direction: column;
+  }
+
+  .official-sidebar {
+    width: 100%;
+  }
+
+  .official-main {
+    padding: 15px;
+  }
+
+  .sidebar-item {
+    font-size: 13px;
+  }
+
+}
+
+/* ===== TABLET (768px) ===== */
+
+@media (max-width: 768px) {
+
+  .official-layout {
+    flex-direction: column;
+  }
+
+  .official-sidebar {
+    width: 100%;
+  }
+
+  .official-main {
+    padding: 20px;
+  }
+
+}
+
+/* ===== LAPTOP (1024px) ===== */
+
+@media (max-width: 1024px) {
+
+  .official-sidebar {
+    width: 220px;
+  }
+
+  .official-main {
+    padding: 25px;
+  }
+
+}
+
+/* ===== DESKTOP (1280px) ===== */
+
+@media (min-width: 1280px) {
+
+  .official-sidebar {
+    width: 280px;
+  }
+
+  .official-main {
+    padding: 35px;
+  }
+
 }

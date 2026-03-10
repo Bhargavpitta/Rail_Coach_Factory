@@ -1,0 +1,307 @@
+@import "../AboutRCF/shared.css";
+
+.stats-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* Tabs */
+.stats-tabs {
+  display: flex;
+  gap: 0;
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.stats-tab {
+  flex: 1;
+  padding: 13px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border: none;
+  background: transparent;
+  color: var(--rcf-gray-600);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border-right: 1px solid var(--rcf-gray-100);
+  text-align: center;
+}
+
+.stats-tab:last-child { border-right: none; }
+
+.stats-tab:hover {
+  background: var(--rcf-gray-50);
+  color: var(--rcf-blue);
+}
+
+.stats-tab--active {
+  background: var(--rcf-blue);
+  color: #fff;
+  box-shadow: inset 0 -3px 0 rgba(255,255,255,0.3);
+}
+
+/* Stats Content */
+.stats-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.stats-date-tag {
+  display: flex;
+  justify-content: center;
+}
+
+.stats-date-badge {
+  background: var(--rcf-info-bg);
+  color: var(--rcf-info);
+  border: 1px solid #bae6fd;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 20px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  letter-spacing: 0.3px;
+}
+
+/* Stats Sections Grid */
+.stats-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.stats-section-card {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+}
+
+.stats-section-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.stats-section-card__header {
+  background: linear-gradient(135deg, var(--rcf-navy), var(--rcf-blue));
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.stats-section-card__icon {
+  font-size: 18px;
+}
+
+.stats-section-card__heading {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+.stats-section-card__items {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stats-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.stats-item:hover {
+  background: var(--rcf-gray-50);
+}
+
+.stats-item__label {
+  font-size: 13px;
+  color: var(--rcf-gray-700);
+  font-family: var(--font-body);
+}
+
+.stats-item__value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--rcf-blue);
+  font-family: var(--font-display);
+}
+
+.stats-item__unit {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--rcf-gray-400);
+  font-family: var(--font-body);
+}
+
+/* Milestones Table */
+.milestones-table-wrapper {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.milestones-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+}
+
+.milestones-table thead tr {
+  background: var(--rcf-navy);
+  color: #fff;
+}
+
+.milestones-table th {
+  padding: 13px 16px;
+  text-align: left;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.milestones-table td {
+  padding: 11px 16px;
+  font-size: 13.5px;
+  border-bottom: 1px solid var(--rcf-gray-50);
+  color: var(--rcf-gray-700);
+}
+
+.milestones-table__row--even td {
+  background: #f8fafc;
+}
+
+.milestones-table tr:hover td {
+  background: #eff6ff !important;
+}
+
+.milestones-table__sno {
+  width: 50px;
+  text-align: center;
+  color: var(--rcf-gray-400);
+  font-size: 12px;
+}
+
+.milestones-table__event {
+  font-weight: 500;
+}
+
+.milestones-table__date {
+  font-weight: 700;
+  color: var(--rcf-blue);
+  white-space: nowrap;
+}
+
+/* Achievements */
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.achievement-card {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border-left: 4px solid transparent;
+}
+
+.achievement-card:hover {
+  border-left-color: var(--rcf-orange);
+  box-shadow: var(--shadow-md);
+  transform: translateX(3px);
+}
+
+.achievement-card__icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.achievement-card__body {
+  flex: 1;
+}
+
+.achievement-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.achievement-card__title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--rcf-navy);
+  margin: 0;
+}
+
+.achievement-card__tag {
+  background: #eff6ff;
+  color: var(--rcf-blue);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  letter-spacing: 0.3px;
+}
+
+.achievement-card__text {
+  font-size: 13.5px;
+  color: var(--rcf-gray-600);
+  line-height: 1.7;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+/* Quick Links active */
+.quick-links-bar__link--active {
+  background: var(--rcf-blue);
+  color: #fff;
+  border-color: var(--rcf-blue);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .stats-sections-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .stats-tabs { flex-direction: column; }
+  .stats-tab { border-right: none; border-bottom: 1px solid var(--rcf-gray-100); }
+  .milestones-table th:nth-child(3),
+  .milestones-table td:nth-child(3) { white-space: nowrap; font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .achievement-card { flex-direction: column; gap: var(--space-md); }
+}

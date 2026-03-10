@@ -1,0 +1,212 @@
+@import "../AboutRCF/shared.css";
+
+.policies-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* Intro */
+.policies-intro {
+  background: var(--rcf-info-bg);
+  border: 1px solid #bae6fd;
+  border-left: 4px solid var(--rcf-info);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.policies-intro__icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.policies-intro__text {
+  font-size: 14px;
+  color: var(--rcf-info);
+  line-height: 1.7;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+/* Policy Sections */
+.policies-sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.policy-section {
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: 20px;
+}
+
+.policy-section__header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.policy-section__header:hover {
+  background: var(--rcf-gray-50);
+}
+
+.policy-section__header--open {
+  background: #eff6ff;
+  border-bottom: 2px solid var(--rcf-blue);
+}
+
+.policy-section__header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.policy-section__icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.policy-section__title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--rcf-navy);
+  margin: 0;
+}
+
+.policy-section__header--open .policy-section__title {
+  color: var(--rcf-blue);
+}
+
+.policy-section__chevron {
+  font-size: 11px;
+  color: var(--rcf-gray-400);
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+}
+
+.policy-section__chevron--open {
+  transform: rotate(180deg);
+  color: var(--rcf-blue);
+}
+
+/* Policy Body */
+.policy-section__body {
+  padding: var(--space-xl);
+  border-top: 1px solid var(--rcf-gray-100);
+  animation: policyExpand 0.2s ease;
+}
+
+@keyframes policyExpand {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.policy-section__para {
+  font-size: 14px;
+  color: var(--rcf-gray-700);
+  line-height: 1.8;
+  margin: 0 0 var(--space-lg) 0;
+  font-family: var(--font-body);
+}
+
+.policy-section__para:last-child {
+  margin-bottom: 0;
+}
+
+/* Sub Sections */
+.policy-subsection {
+  margin-top: var(--space-lg);
+  background: var(--rcf-gray-50);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.policy-subsection__title {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--rcf-blue);
+  margin: 0 0 var(--space-md) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.policy-subsection__list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.policy-subsection__item {
+  font-size: 13.5px;
+  color: var(--rcf-gray-700);
+  line-height: 1.6;
+  font-family: var(--font-body);
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+
+.policy-subsection__item::before {
+  content: '▸';
+  color: var(--rcf-orange);
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Disclaimer */
+.policies-disclaimer {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 4px solid var(--rcf-saffron);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.policies-disclaimer__title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: #92400e;
+  margin-bottom: var(--space-md);
+}
+
+.policies-disclaimer__text {
+  font-size: 13.5px;
+  color: #78350f;
+  line-height: 1.7;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .policy-section__header { padding: var(--space-md) var(--space-lg); }
+  .policy-section__body { padding: var(--space-lg); }
+  .policy-section__title { font-size: 14px; }
+  .quick-links-bar__links { display: grid; grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .policy-section__icon { display: none; }
+}
