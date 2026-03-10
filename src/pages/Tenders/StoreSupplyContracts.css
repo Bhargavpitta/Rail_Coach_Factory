@@ -1,0 +1,177 @@
+/* src/pages/Tenders/StoreSupplyContracts.css */
+
+.ssc-card {
+  background: var(--rcf-white);
+  border-radius: var(--rcf-radius);
+  box-shadow: var(--rcf-card-shadow);
+  overflow: hidden;
+  border: 1px solid var(--rcf-border);
+}
+
+.ssc-card-header {
+  background: var(--rcf-navy);
+  padding: 14px 22px;
+}
+
+.ssc-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--rcf-white);
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.ssc-card-body {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* IREPS Info */
+.ireps-info-box {
+  background: #f0f5fc;
+  border: 1px solid var(--rcf-border);
+  border-radius: var(--rcf-radius-sm);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ireps-info-text {
+  font-size: 0.9rem;
+  color: var(--rcf-blue);
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.ireps-path {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ireps-path-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--rcf-navy);
+  background: var(--rcf-white);
+  padding: 8px 16px;
+  border-radius: var(--rcf-radius-sm);
+  border: 1px solid var(--rcf-border);
+  font-family: 'Courier New', monospace;
+}
+
+.ireps-visit-btn {
+  padding: 8px 18px;
+  background: var(--rcf-blue);
+  color: var(--rcf-white);
+  border-radius: var(--rcf-radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.ireps-visit-btn:hover {
+  background: var(--rcf-navy);
+}
+
+/* Purchase Orders List */
+.po-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--rcf-border);
+  border-radius: var(--rcf-radius-sm);
+  overflow: hidden;
+}
+
+.po-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #eef1f7;
+  text-decoration: none;
+  color: var(--rcf-text);
+  transition: background 0.15s;
+}
+
+.po-item:last-child {
+  border-bottom: none;
+}
+
+.po-item:hover {
+  background: #f0f5fc;
+}
+
+.po-item:hover .po-label {
+  color: var(--rcf-blue);
+  text-decoration: underline;
+}
+
+.po-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.po-label {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--rcf-blue);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.po-year-badge {
+  background: var(--rcf-navy);
+  color: var(--rcf-white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.po-arrow {
+  color: var(--rcf-blue);
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.po-item:hover .po-arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .ssc-card-body {
+    padding: 18px 16px;
+  }
+
+  .ireps-path {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .ireps-path-text {
+    font-size: 0.8rem;
+    word-break: break-all;
+  }
+
+  .po-item {
+    padding: 12px 14px;
+  }
+
+  .po-arrow {
+    display: none;
+  }
+}

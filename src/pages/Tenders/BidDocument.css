@@ -1,0 +1,160 @@
+/* src/pages/Tenders/BidDocument.css */
+
+.bid-card {
+  background: var(--rcf-white);
+  border-radius: var(--rcf-radius);
+  box-shadow: var(--rcf-card-shadow);
+  overflow: hidden;
+  border: 1px solid var(--rcf-border);
+}
+
+.bid-card-header {
+  background: var(--rcf-navy);
+  padding: 14px 22px;
+}
+
+.bid-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--rcf-white);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.bid-card-body {
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bid-info-note {
+  background: #f0f5fc;
+  border-left: 4px solid var(--rcf-blue);
+  border-radius: 4px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.bid-info-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.bid-info-note p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--rcf-text);
+  line-height: 1.6;
+}
+
+/* Document List */
+.bid-doc-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rcf-border);
+  border-radius: var(--rcf-radius-sm);
+  overflow: hidden;
+  counter-reset: bid-counter;
+}
+
+.bid-doc-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-bottom: 1px solid #eef1f7;
+  text-decoration: none;
+  color: var(--rcf-text);
+  transition: background 0.15s;
+  counter-increment: bid-counter;
+}
+
+.bid-doc-row:last-child {
+  border-bottom: none;
+}
+
+.bid-doc-row:hover {
+  background: #f0f5fc;
+}
+
+.bid-doc-row:hover .bid-doc-label {
+  color: var(--rcf-blue);
+  text-decoration: underline;
+}
+
+.bid-doc-base {
+  background: #fffbf0;
+  border-bottom: 2px solid var(--rcf-gold) !important;
+}
+
+.bid-doc-base:hover {
+  background: #fff8e1 !important;
+}
+
+.bid-doc-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.bid-doc-label {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--rcf-blue);
+  font-weight: 500;
+  transition: color 0.2s;
+  line-height: 1.4;
+}
+
+.bid-base-badge {
+  background: var(--rcf-gold);
+  color: #5a3500;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.bid-doc-dl {
+  color: var(--rcf-text-muted);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.bid-doc-row:hover .bid-doc-dl {
+  opacity: 1;
+}
+
+.bid-source-note {
+  font-size: 0.78rem;
+  color: var(--rcf-text-muted);
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px dashed var(--rcf-border);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .bid-card-body {
+    padding: 18px 16px;
+  }
+
+  .bid-doc-row {
+    padding: 10px 14px;
+  }
+
+  .bid-base-badge {
+    display: none;
+  }
+
+  .bid-doc-label {
+    font-size: 0.83rem;
+  }
+}

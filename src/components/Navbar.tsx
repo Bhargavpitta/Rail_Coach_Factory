@@ -108,7 +108,6 @@ const Navbar = () => {
       to: "/tenders", label: "Tender Information",
       dropdown: [
         { label: "Tenders", path: "/tenders" },
-        { label: "IREPS Tenders", path: "/tenders/ireps" },
         { label: "Expression of Interest", path: "/tenders/eoi" },
         { label: "View Awarded Tenders", path: "/tenders/awarded" },
         {

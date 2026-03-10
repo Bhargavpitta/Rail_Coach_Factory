@@ -1,0 +1,436 @@
+/* src/pages/Tenders/Tenders.css */
+
+/* ─── Variables ─────────────────────────────── */
+:root {
+  --rcf-navy: #1a3a6b;
+  --rcf-blue: #1e5cad;
+  --rcf-blue-light: #2a72cc;
+  --rcf-accent: #e87722;
+  --rcf-gold: #f5a623;
+  --rcf-bg: #f4f6fa;
+  --rcf-white: #ffffff;
+  --rcf-border: #d0d9e8;
+  --rcf-text: #1e2a3b;
+  --rcf-text-muted: #607080;
+  --rcf-sidebar-bg: #f0f3f8;
+  --rcf-card-shadow: 0 2px 12px rgba(30, 92, 173, 0.10);
+  --rcf-radius: 8px;
+  --rcf-radius-sm: 5px;
+  --font-main: 'Segoe UI', 'Noto Sans', Arial, sans-serif;
+}
+
+/* ─── Page Wrapper ───────────────────────────── */
+.tenders-page {
+  background: var(--rcf-bg);
+  min-height: 100vh;
+  font-family: var(--font-main);
+}
+
+/* ─── Breadcrumb ─────────────────────────────── */
+.tenders-breadcrumb {
+  background: var(--rcf-navy);
+  padding: 10px 0;
+}
+
+.tenders-breadcrumb a {
+  color: #a8c4f0;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.tenders-breadcrumb a:hover {
+  color: var(--rcf-white);
+}
+
+.tenders-breadcrumb span {
+  font-size: 0.85rem;
+  color: #c5d8f5;
+}
+
+.breadcrumb-sep {
+  margin: 0 6px;
+  color: #6a90c8;
+}
+
+.breadcrumb-active {
+  color: var(--rcf-gold) !important;
+  font-weight: 600;
+}
+
+/* ─── Container ──────────────────────────────── */
+.tenders-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ─── Layout ─────────────────────────────────── */
+.tenders-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 28px;
+  padding-top: 28px;
+  padding-bottom: 40px;
+  align-items: start;
+}
+
+/* ─── Sidebar ────────────────────────────────── */
+.tenders-sidebar {
+  background: var(--rcf-white);
+  border-radius: var(--rcf-radius);
+  box-shadow: var(--rcf-card-shadow);
+  overflow: hidden;
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar-section {
+  padding: 0;
+}
+
+.sidebar-title {
+  background: var(--rcf-navy);
+  color: var(--rcf-white);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 14px 18px;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.sidebar-links {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.sidebar-link {
+  border-bottom: 1px solid #eef1f7;
+}
+
+.sidebar-link:last-child {
+  border-bottom: none;
+}
+
+.sidebar-link a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 0.875rem;
+  color: var(--rcf-text);
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  line-height: 1.4;
+}
+
+.sidebar-link a:hover {
+  background: #e8eef8;
+  color: var(--rcf-blue);
+  padding-left: 22px;
+}
+
+.sidebar-link.active a {
+  background: var(--rcf-blue);
+  color: var(--rcf-white);
+  font-weight: 600;
+}
+
+/* ─── Main Content ───────────────────────────── */
+.tenders-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tenders-header-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 4px;
+}
+
+.tenders-page-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--rcf-navy);
+  margin: 0;
+  border-left: 4px solid var(--rcf-accent);
+  padding-left: 12px;
+}
+
+/* ─── Active Tenders CTA ─────────────────────── */
+.active-tenders-cta {
+  background: var(--rcf-white);
+  border-radius: var(--rcf-radius);
+  box-shadow: var(--rcf-card-shadow);
+  padding: 22px 28px;
+  border-left: 4px solid var(--rcf-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.active-tenders-link {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--rcf-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.active-tenders-link:hover {
+  color: var(--rcf-blue-light);
+  text-decoration: underline;
+}
+
+.ireps-note {
+  font-size: 0.875rem;
+  color: #c0392b;
+  margin: 0;
+  font-weight: 500;
+}
+
+.ireps-note a {
+  color: var(--rcf-blue);
+  font-weight: 700;
+}
+
+/* ─── Search Cards ───────────────────────────── */
+.search-card {
+  background: var(--rcf-white);
+  border-radius: var(--rcf-radius);
+  box-shadow: var(--rcf-card-shadow);
+  overflow: hidden;
+  border: 1px solid var(--rcf-border);
+}
+
+.search-card-header {
+  background: #e8eef8;
+  border-bottom: 2px solid var(--rcf-blue);
+  padding: 12px 22px;
+}
+
+.search-card-title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--rcf-navy);
+  margin: 0;
+}
+
+.search-card-body {
+  padding: 20px 22px;
+}
+
+/* ─── Keyword Form ───────────────────────────── */
+.keyword-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--rcf-text);
+}
+
+.search-input-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 9px 14px;
+  border: 1px solid var(--rcf-border);
+  border-radius: var(--rcf-radius-sm);
+  font-size: 0.875rem;
+  color: var(--rcf-text);
+  background: #f9fafc;
+  transition: border 0.2s;
+  font-family: var(--font-main);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--rcf-blue);
+  background: var(--rcf-white);
+  box-shadow: 0 0 0 3px rgba(30, 92, 173, 0.1);
+}
+
+.search-btn {
+  padding: 9px 22px;
+  background: var(--rcf-blue);
+  color: var(--rcf-white);
+  border: none;
+  border-radius: var(--rcf-radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  font-family: var(--font-main);
+  white-space: nowrap;
+}
+
+.search-btn:hover {
+  background: var(--rcf-navy);
+  transform: translateY(-1px);
+}
+
+.search-btn:active {
+  transform: translateY(0);
+}
+
+/* ─── Date Form ──────────────────────────────── */
+.date-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.date-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.date-label-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--rcf-text);
+  white-space: nowrap;
+}
+
+.date-input {
+  flex: 1;
+  min-width: 140px;
+  max-width: 200px;
+}
+
+/* ─── Filter Form ────────────────────────────── */
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.filter-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--rcf-text);
+}
+
+.filter-radios {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--rcf-text);
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: var(--rcf-blue);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.filter-select {
+  padding: 9px 14px;
+  border: 1px solid var(--rcf-border);
+  border-radius: var(--rcf-radius-sm);
+  font-size: 0.875rem;
+  color: var(--rcf-text);
+  background: #f9fafc;
+  font-family: var(--font-main);
+  cursor: pointer;
+  max-width: 300px;
+  transition: border 0.2s;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--rcf-blue);
+  box-shadow: 0 0 0 3px rgba(30, 92, 173, 0.1);
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.show-btn {
+  min-width: 120px;
+}
+
+/* ─── Responsive ─────────────────────────────── */
+@media (max-width: 1024px) {
+  .tenders-layout {
+    grid-template-columns: 210px 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tenders-layout {
+    grid-template-columns: 1fr;
+    padding-top: 16px;
+    padding-bottom: 28px;
+  }
+
+  .tenders-sidebar {
+    position: static;
+  }
+
+  .filter-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .date-inputs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date-input {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .search-input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .active-tenders-cta {
+    padding: 16px 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .tenders-page-title {
+    font-size: 1.25rem;
+  }
+
+  .filter-radios {
+    gap: 12px;
+  }
+}

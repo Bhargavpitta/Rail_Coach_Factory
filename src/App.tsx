@@ -15,7 +15,7 @@ import Certificates from "./pages/AboutRCF/Certificates";
 import OrganisationProfile from "./pages/AboutRCF/OrganisationProfile";
 import GeneralManagers from "./pages/AboutRCF/GeneralManagers";
 import AboutRCF from "./components/navitems/AboutRCF";
-import Aboutrcf from "./pages/AboutRCF/Aboutrcf"
+import Aboutrcf from "./pages/AboutRCF/AboutRCFPage";
 import TenderInfo from "./components/navitems/TenderInfo";
 import ContactUs from "./components/navitems/ContactUs";
 import Products from "./components/navitems/Products";
@@ -23,6 +23,13 @@ import StaffCorner from "./components/navitems/StaffCorner";
 import Vendor from "./components/navitems/Vendor";
 import OrganisationStructure from "./pages/AboutRCF/OrganisationStructure";
 import Environment from "./pages/AboutRCF/Environment";
+
+import Tenders from "./pages/Tenders/Tenders";
+import ExpressionOfInterest from "./pages/Tenders/ExpressionOfInterest";
+import AwardedTenders from "./pages/Tenders/AwardedTenders";
+import SurplusItems from "./pages/Tenders/SurplusItems";
+import StoreSupplyContracts from "./pages/Tenders/StoreSupplyContracts";
+import BidDocument from "./pages/Tenders/BidDocument";
 import AnnualReports from "./pages/AboutRCF/AnnualReports";
 import PhotoGallery from "./pages/AboutRCF/PhotoGallery";
 import Holidays from "./pages/AboutRCF/Holidays";
@@ -64,7 +71,7 @@ const App = () => (
 
 
                 <Route path="/departments" element={<Departments />} />
-                <Route path="/tenders" element={<TenderInfo />} />
+
                 <Route path="/products" element={<Products />} />
                 <Route path="/Staffcorner" element={<StaffCorner />} />
                 <Route path="/vendors" element={<Vendor />} />
@@ -72,6 +79,23 @@ const App = () => (
                 <Route path="/news" element={<News />} />
 
                 <Route path="*" element={<NotFound />} />
+
+               {/* <Route path="/tenders" element={<TenderInfo />}>
+              <Route path="cpp-tenders" element={<Tenders />} />
+              <Route path="expression-of-interest" element={<ExpressionOfInterest />} />
+              <Route path="awarded-tenders" element={<AwardedTenders />} />
+              <Route path="surplus-items" element={<SurplusItems />} />
+              <Route path="store-supply-contracts" element={<StoreSupplyContracts />} />
+              <Route path="bid-document" element={<BidDocument />} />
+              </Route> */}
+
+              <Route path="/tenders" element={<Tenders />} />
+                <Route path="/tenders/eoi" element={<ExpressionOfInterest />} />
+                <Route path="/tenders/awarded" element={<AwardedTenders />} />
+                <Route path="/tenders/surplus" element={<SurplusItems />} />
+                <Route path="/tenders/contracts" element={<StoreSupplyContracts />} />
+                <Route path="/tenders/bid-documents" element={<BidDocument />} />
+                            
               </Routes>
             </main>
             <Footer />

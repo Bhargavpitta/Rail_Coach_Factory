@@ -1,0 +1,164 @@
+/* src/pages/Tenders/SurplusItems.css */
+
+.surplus-card {
+  background: var(--rcf-white);
+  border-radius: var(--rcf-radius);
+  box-shadow: var(--rcf-card-shadow);
+  overflow: hidden;
+  border: 1px solid var(--rcf-border);
+}
+
+.surplus-card-header {
+  background: var(--rcf-navy);
+  padding: 14px 22px;
+}
+
+.surplus-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--rcf-white);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.surplus-card-body {
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.surplus-note-box {
+  background: #fff8e1;
+  border-left: 4px solid var(--rcf-gold);
+  border-radius: 4px;
+  padding: 14px 18px;
+}
+
+.surplus-note {
+  font-size: 0.9rem;
+  color: #5a4000;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.surplus-desc {
+  font-size: 0.9rem;
+  color: var(--rcf-text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.surplus-contact {
+  background: #f0f5fc;
+  border-radius: var(--rcf-radius-sm);
+  padding: 16px 20px;
+  border: 1px solid var(--rcf-border);
+}
+
+.surplus-contact p {
+  font-size: 0.9rem;
+  color: var(--rcf-text);
+  margin: 0 0 12px;
+}
+
+.surplus-contact-grid {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 6px 12px;
+  max-width: 260px;
+}
+
+.contact-type {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--rcf-navy);
+}
+
+.contact-number {
+  font-size: 0.9rem;
+  color: var(--rcf-text);
+}
+
+.contact-number::before {
+  content: ": ";
+}
+
+/* Items Spared */
+.items-spared-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.items-spared-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--rcf-navy);
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  padding: 12px;
+  background: #e8eef8;
+  border-radius: var(--rcf-radius-sm);
+  border: 1px solid var(--rcf-border);
+}
+
+.surplus-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--rcf-border);
+  border-radius: var(--rcf-radius-sm);
+  overflow: hidden;
+}
+
+.surplus-item-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-bottom: 1px solid #eef1f7;
+  transition: background 0.15s;
+}
+
+.surplus-item-row:last-child {
+  border-bottom: none;
+}
+
+.surplus-item-row:hover {
+  background: #f0f5fc;
+}
+
+.surplus-item-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.surplus-item-link {
+  font-size: 0.9rem;
+  color: var(--rcf-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.surplus-item-link:hover {
+  color: var(--rcf-navy);
+  text-decoration: underline;
+}
+
+.surplus-item-text {
+  font-size: 0.9rem;
+  color: var(--rcf-text-muted);
+}
+
+@media (max-width: 768px) {
+  .surplus-card-body {
+    padding: 18px 16px;
+  }
+
+  .items-spared-title {
+    font-size: 0.9rem;
+  }
+}
