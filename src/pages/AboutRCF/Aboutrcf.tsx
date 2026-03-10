@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import AboutLayout from "./AboutLayout"; // Using the official sidebar layout
-import "./AboutRCF.css";
+import "./Aboutrcf.css";
 
 function AboutRCF() {
   return (
