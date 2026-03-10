@@ -1,0 +1,129 @@
+/* src/pages/Tenders/AwardedTenders.css */
+
+.awarded-info-box {
+  background: var(--rcf-white);
+  border-radius: var(--rcf-radius);
+  box-shadow: var(--rcf-card-shadow);
+  padding: 18px 24px;
+  border-left: 4px solid var(--rcf-accent);
+}
+
+.awarded-stores-note {
+  font-size: 0.9rem;
+  color: var(--rcf-text);
+  margin: 0;
+}
+
+.awarded-click-link {
+  color: var(--rcf-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.awarded-click-link:hover {
+  text-decoration: underline;
+}
+
+.awarded-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.awarded-form-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.awarded-form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.reset-btn {
+  padding: 9px 22px;
+  background: transparent;
+  color: var(--rcf-navy);
+  border: 2px solid var(--rcf-navy);
+  border-radius: var(--rcf-radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-family: var(--font-main);
+}
+
+.reset-btn:hover {
+  background: var(--rcf-navy);
+  color: var(--rcf-white);
+}
+
+/* Department grid */
+.awarded-dept-grid {
+  background: var(--rcf-white);
+  border-radius: var(--rcf-radius);
+  box-shadow: var(--rcf-card-shadow);
+  padding: 22px 24px;
+  border: 1px solid var(--rcf-border);
+}
+
+.awarded-dept-grid-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--rcf-navy);
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--rcf-blue);
+}
+
+.dept-badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dept-badge {
+  padding: 7px 16px;
+  background: #eef2fb;
+  color: var(--rcf-navy);
+  border: 1px solid var(--rcf-border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  font-family: var(--font-main);
+}
+
+.dept-badge:hover {
+  background: var(--rcf-blue);
+  color: var(--rcf-white);
+  border-color: var(--rcf-blue);
+}
+
+.dept-badge-active {
+  background: var(--rcf-navy);
+  color: var(--rcf-white);
+  border-color: var(--rcf-navy);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .awarded-form-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .dept-badge-grid {
+    gap: 8px;
+  }
+
+  .dept-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

@@ -1,11 +1,24 @@
 import React from 'react'
 
-function TenderInfo() {
+// function TenderInfo() {
+//   return (
+//     <div>
+//       TenderInfo
+//     </div>
+//   )
+// }
+
+import { Outlet } from "react-router-dom";
+
+const TenderInfo = () => {
   return (
     <div>
-      TenderInfo
-    </div>
-  )
-}
+      {/* Your Tender menu UI */}
 
-export default TenderInfo
+      <Outlet />
+    </div>
+  );
+};
+
+export default TenderInfo;
+

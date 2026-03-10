@@ -1,0 +1,111 @@
+/* src/pages/Tenders/ExpressionOfInterest.css */
+
+.eoi-section {
+  background: var(--rcf-white);
+  border-radius: var(--rcf-radius);
+  box-shadow: var(--rcf-card-shadow);
+  overflow: hidden;
+  border: 1px solid var(--rcf-border);
+}
+
+.eoi-dept-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--rcf-navy);
+  margin: 0;
+  padding: 14px 22px;
+  background: #e8eef8;
+  border-bottom: 2px solid var(--rcf-blue);
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.eoi-table-wrapper {
+  overflow-x: auto;
+}
+
+.eoi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.eoi-table thead tr {
+  background: var(--rcf-navy);
+  color: var(--rcf-white);
+}
+
+.eoi-table th {
+  padding: 12px 16px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.2px;
+}
+
+.eoi-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eef1f7;
+  vertical-align: middle;
+  color: var(--rcf-text);
+  line-height: 1.5;
+}
+
+.eoi-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.eoi-table tbody tr:hover {
+  background: #f0f5fc;
+}
+
+.eoi-table tbody tr:nth-child(even) {
+  background: #f8fafd;
+}
+
+.eoi-table tbody tr:nth-child(even):hover {
+  background: #e8eef8;
+}
+
+.col-sno {
+  width: 70px;
+  text-align: center;
+}
+
+.col-title {
+  min-width: 260px;
+}
+
+.col-date {
+  width: 130px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.eoi-link {
+  color: var(--rcf-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.eoi-link:hover {
+  color: var(--rcf-navy);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .eoi-table th,
+  .eoi-table td {
+    padding: 10px 12px;
+  }
+
+  .col-sno {
+    width: 50px;
+  }
+
+  .col-date {
+    width: 100px;
+    font-size: 0.8rem;
+  }
+}
