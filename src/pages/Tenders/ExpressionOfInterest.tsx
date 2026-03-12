@@ -1,3 +1,4 @@
+
 // src/pages/Tenders/ExpressionOfInterest.tsx
 
 import { Link } from "react-router-dom";
@@ -55,6 +56,7 @@ const eoiMechanical: EOIItem[] = [
 const EOITable = ({ items, dept }: { items: EOIItem[]; dept: string }) => (
   <div className="eoi-section">
     <h2 className="eoi-dept-title">Expression of Interest ({dept})</h2>
+
     <div className="eoi-table-wrapper">
       <table className="eoi-table">
         <thead>
@@ -64,15 +66,23 @@ const EOITable = ({ items, dept }: { items: EOIItem[]; dept: string }) => (
             <th className="col-date">Upload Date</th>
           </tr>
         </thead>
+
         <tbody>
           {items.map((item) => (
             <tr key={item.sno}>
               <td className="col-sno">{item.sno}</td>
+
               <td className="col-title">
-                <a href={item.link} className="eoi-link" target="_blank" rel="noopener noreferrer">
+                <a
+                  href={item.link}
+                  className="eoi-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {item.title}
                 </a>
               </td>
+
               <td className="col-date">{item.uploadDate}</td>
             </tr>
           ))}
@@ -84,7 +94,7 @@ const EOITable = ({ items, dept }: { items: EOIItem[]; dept: string }) => (
 
 const ExpressionOfInterest = () => {
   return (
-    <div className="tenders-page">
+    <>
       {/* Breadcrumb */}
       <div className="tenders-breadcrumb">
         <div className="tenders-container">
@@ -96,56 +106,18 @@ const ExpressionOfInterest = () => {
         </div>
       </div>
 
-      <div className="tenders-container tenders-layout">
-        {/* Sidebar */}
-        <aside className="tenders-sidebar">
-          <div className="sidebar-section">
-            <h3 className="sidebar-title">Tender Information</h3>
-            <ul className="sidebar-links">
-
-                  <li className="sidebar-link">
-                    <Link to="/tenders">Tenders</Link>
-                  </li>
-
-                  <li className="sidebar-link">
-                    <Link to="/tenders/eoi">Expression of Interest</Link>
-                  </li>
-
-                  <li className="sidebar-link">
-                    <Link to="/tenders/awarded">View Awarded Tenders</Link>
-                  </li>
-
-                  <li className="sidebar-link">
-                    <Link to="/tenders/surplus">Surplus Items</Link>
-                  </li>
-
-                  <li className="sidebar-link">
-                    <Link to="/tenders/contracts">Store Supply Contracts</Link>
-                  </li>
-
-                  <li className="sidebar-link">
-                    <Link to="/tenders/bid-documents">
-                      Bid Document & IRS Conditions
-                    </Link>
-                  </li>
-
-              </ul>
-          </div>
-        </aside>
-
-        {/* Main Content */}
-        <main className="tenders-main">
-          <div className="tenders-header-bar">
-            <h1 className="tenders-page-title">Expression of Interest</h1>
-          </div>
-
-          <EOITable items={eoiElectrical} dept="Electrical" />
-          <EOITable items={eoiMedical} dept="Medical" />
-          <EOITable items={eoiMechanical} dept="Mechanical" />
-        </main>
+      {/* Page Header */}
+      <div className="tenders-header-bar">
+        <h1 className="tenders-page-title">Expression of Interest</h1>
       </div>
-    </div>
+
+      {/* Tables */}
+      <EOITable items={eoiElectrical} dept="Electrical" />
+      <EOITable items={eoiMedical} dept="Medical" />
+      <EOITable items={eoiMechanical} dept="Mechanical" />
+    </>
   );
 };
 
 export default ExpressionOfInterest;
+

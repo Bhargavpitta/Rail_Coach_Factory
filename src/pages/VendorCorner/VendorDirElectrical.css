@@ -1,0 +1,32 @@
+/* VendorDirElectrical.css */
+.vde-main { font-family: "Arial", sans-serif; background: #f5f7fa; min-height: 100vh; }
+.vde-hero { background: linear-gradient(135deg, #003580 0%, #0055b3 100%); padding: 56px 24px 48px; }
+.vde-hero-inner { max-width: 1100px; margin: 0 auto; }
+.vde-hero-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #d0e8ff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.22); margin-bottom: 18px; }
+.vde-hero-title { font-family: "Georgia", serif; font-size: 2.2rem; color: #fff; margin: 0 0 14px; font-weight: 700; }
+.vde-hero-subtitle { font-size: 1rem; color: #b8d8f8; max-width: 580px; line-height: 1.65; margin: 0; }
+.vde-breadcrumb { background: #fff; border-bottom: 1px solid #e0e8f0; }
+.vde-breadcrumb-inner { max-width: 1100px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 0.85rem; }
+.vde-breadcrumb a { color: #0055b3; text-decoration: none; }
+.vde-breadcrumb a:hover { text-decoration: underline; }
+.vde-breadcrumb span:last-child { color: #4a5568; font-weight: 500; }
+.vde-sep { color: #aab0ba; }
+.vde-section { background: #fff; border: 1px solid #e0e8f0; border-radius: 14px; padding: 32px; box-shadow: 0 2px 10px rgba(0,53,128,0.05); display: flex; flex-direction: column; gap: 20px; }
+.vde-section-title { font-family: "Georgia", serif; font-size: 1.3rem; color: #1a2940; margin: 0; padding-bottom: 14px; border-bottom: 2px solid #e0eaf5; }
+.vde-links-list { display: flex; flex-direction: column; gap: 10px; }
+.vde-link-item { display: flex; align-items: center; gap: 14px; padding: 15px 18px; background: #f8fafd; border: 1px solid #e4ecf5; border-radius: 10px; text-decoration: none; transition: all 0.2s; }
+.vde-link-item:hover { background: #eef5ff; border-color: #b3d0f0; transform: translateX(4px); }
+.vde-link-icon { font-size: 1.2rem; flex-shrink: 0; }
+.vde-link-text { flex: 1; font-size: 0.9rem; color: #0055b3; font-weight: 500; line-height: 1.45; }
+.vde-link-arrow { color: #0055b3; font-size: 0.95rem; transition: transform 0.2s; flex-shrink: 0; }
+.vde-link-item:hover .vde-link-arrow { transform: translateX(3px); }
+.vde-info-card { background: #f0f8ff; border: 1px solid #c0d8f0; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px; }
+.vde-info-row { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: #2d3a4a; line-height: 1.5; }
+.vde-bullet { color: #003580; font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+.vde-uvam-link { color: #0055b3; font-weight: 700; text-decoration: none; }
+.vde-uvam-link:hover { text-decoration: underline; }
+.vde-str-link-block { padding: 14px 18px; background: #f8fafd; border: 1px solid #e4ecf5; border-radius: 10px; }
+.vde-str-link { font-size: 0.9rem; color: #0055b3; text-decoration: none; font-weight: 500; }
+.vde-str-link:hover { text-decoration: underline; }
+@media (max-width: 768px) { .vde-hero-title { font-size: 1.6rem; } .vde-section { padding: 20px 16px; } }
+@media (max-width: 320px) { .vde-hero-title { font-size: 1.2rem; } }

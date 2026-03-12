@@ -1,0 +1,113 @@
+/* PLUnification.css */
+
+.pl-main {
+  font-family: "Arial", sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.pl-hero {
+  background: linear-gradient(135deg, #003580 0%, #0055b3 100%);
+  padding: 56px 24px 48px;
+}
+.pl-hero-inner { max-width: 1100px; margin: 0 auto; }
+
+.pl-hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: #d0e8ff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.22);
+  margin-bottom: 18px;
+}
+
+.pl-hero-title {
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.pl-hero-subtitle {
+  font-size: 1rem;
+  color: #b8d8f8;
+  max-width: 580px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.pl-breadcrumb { background: #fff; border-bottom: 1px solid #e0e8f0; }
+.pl-breadcrumb-inner {
+  max-width: 1100px; margin: 0 auto; padding: 12px 24px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 0.85rem;
+}
+.pl-breadcrumb a { color: #0055b3; text-decoration: none; }
+.pl-breadcrumb a:hover { text-decoration: underline; }
+.pl-breadcrumb span:last-child { color: #4a5568; font-weight: 500; }
+.pl-sep { color: #aab0ba; }
+
+
+.pl-section {
+  background: #fff;
+  border: 1px solid #e0e8f0;
+  border-radius: 14px;
+  padding: 36px;
+  box-shadow: 0 2px 10px rgba(0,53,128,0.05);
+}
+
+.pl-section-title {
+  font-family: "Georgia", serif;
+  font-size: 1.3rem;
+  color: #1a2940;
+  margin: 0 0 28px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e0eaf5;
+}
+
+.pl-contact-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a2940;
+  margin-bottom: 16px;
+}
+
+.pl-contact-card {
+  border: 1px solid #d0dcea;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pl-contact-row {
+  padding: 13px 18px;
+  border-bottom: 1px solid #e8eef5;
+  font-size: 0.92rem;
+  color: #2d3a4a;
+  background: #f8fafd;
+  transition: background 0.15s;
+}
+
+.pl-contact-row:hover { background: #eef5ff; }
+.pl-contact-row:last-child { border-bottom: none; }
+
+.pl-contact-field { font-weight: 500; }
+
+.pl-email-link {
+  color: #0055b3;
+  text-decoration: none;
+  font-weight: 600;
+}
+.pl-email-link:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .pl-hero-title { font-size: 1.6rem; }
+  .pl-section { padding: 20px 16px; }
+}
+@media (max-width: 320px) {
+  .pl-hero-title { font-size: 1.2rem; }
+}

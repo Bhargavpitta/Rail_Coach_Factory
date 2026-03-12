@@ -1,0 +1,183 @@
+/* ProductGallery.css */
+
+.pg-main {
+  font-family: "Arial", sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.pg-hero {
+  background: linear-gradient(135deg, #003580 0%, #0055b3 100%);
+  padding: 56px 24px 48px;
+}
+
+.pg-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pg-hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: #d0e8ff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  margin-bottom: 18px;
+}
+
+.pg-hero-title {
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.pg-hero-subtitle {
+  font-size: 1rem;
+  color: #b8d8f8;
+  max-width: 580px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Breadcrumb */
+.pg-breadcrumb {
+  background: #fff;
+  border-bottom: 1px solid #e0e8f0;
+}
+
+.pg-breadcrumb-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.pg-breadcrumb a {
+  color: #0055b3;
+  text-decoration: none;
+}
+
+.pg-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.pg-breadcrumb span:last-child {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.pg-sep {
+  color: #aab0ba;
+}
+
+
+.pg-section {
+  background: #fff;
+  border: 1px solid #e0e8f0;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 2px 10px rgba(0, 53, 128, 0.05);
+}
+
+.pg-section-title {
+  font-family: "Georgia", serif;
+  font-size: 1.3rem;
+  color: #1a2940;
+  margin: 0 0 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e0eaf5;
+}
+
+/* List */
+.pg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Product Gallery Items (Residents-style cards) */
+.pg-item {
+  display: flex;
+  flex-direction: column; /* make it more card-like */
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--rcf-gray-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.pg-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--rcf-blue);
+}
+
+.pg-item-icon {
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+.pg-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pg-item-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--rcf-navy);
+  line-height: 1.4;
+}
+
+.pg-item-date,
+.pg-item-desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--rcf-gray-700);
+  line-height: 1.6;
+}
+
+.pg-item-arrow {
+  display: none; /* optional, since card style doesn’t need arrow */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pg-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .pg-section {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .pg-hero-title {
+    font-size: 1.2rem;
+  }
+}

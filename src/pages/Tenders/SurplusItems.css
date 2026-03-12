@@ -9,14 +9,16 @@
 }
 
 .surplus-card-header {
-  background: var(--rcf-navy);
+  background: white;
+  color:black;
   padding: 14px 22px;
 }
 
 .surplus-card-title {
+  color: black;
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--rcf-white);
+
   margin: 0;
   letter-spacing: 0.5px;
 }

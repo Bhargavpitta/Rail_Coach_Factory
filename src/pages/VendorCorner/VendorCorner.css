@@ -1,0 +1,247 @@
+/* =============================
+VendorCorner Page Styling (Updated Spacing)
+============================= */
+
+/* Headings (same as AboutRCF) */
+.vc-container h1,
+.vc-container h2,
+.vc-container h3,
+.vc-container h4,
+.vc-container h5,
+.vc-container h6 {
+  font-family: "Georgia", "Times New Roman", serif;
+  color: hsl(228, 55%, 45%);
+  margin-bottom: 12px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* Main Title */
+.vc-container .main-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: hsl(228, 55%, 45%);
+  margin-top: 24px;       /* Space from navbar */
+  margin-bottom: 24px;    /* Space below heading */
+  position: relative;
+  gap: 28px;
+  padding: 0;             /* No background or border */
+}
+
+/* Title underline */
+.vc-container .title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #ffc107;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+/* Responsive headings */
+@media (min-width: 768px) {
+  .vc-container .main-title {
+    font-size: 1.9rem;
+  }
+  .vc-container .title-underline {
+    width: 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .vc-container .main-title {
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .vc-container .main-title {
+    font-size: 2.3rem;
+  }
+  .vc-container .title-underline {
+    width: 80px;
+    height: 5px;
+  }
+}
+
+/* =============================
+PAGE
+============================= */
+
+.vc-main {
+  font-family: "Georgia", "Times New Roman", serif;
+  background: #f4f6f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;              /* Space between sections */
+padding: 10px 32px 0 10px; /* top 24px, right 32px, bottom 0, left 0 */
+  animation: vcFadeIn 0.45s ease;
+}
+
+/* Layout */
+.vc-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  align-items: start;
+}
+
+/* Sidebar */
+.vc-sidebar {
+  width: 260px;
+  background: #1f3c63;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 20px);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  z-index: 1000;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(30, 92, 173, 0.12);
+  scrollbar-width: none;
+}
+
+.vc-sidebar::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Sidebar title */
+.vc-sidebar-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 18px;
+  background: #162c4a;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Sidebar links container */
+.vc-sidebar-links {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar link */
+.vc-sidebar-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Link styling */
+.vc-sidebar-link a,
+.vc-dropdown-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover animation */
+.vc-sidebar-link a:hover,
+.vc-dropdown-title:hover {
+  background: #2a5185;
+  padding-left: 22px;
+}
+
+/* Active item */
+.vc-sidebar-link a.active,
+.vc-dropdown-title.active {
+  background: #f58220;
+  color: white;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+/* Click feedback */
+.vc-sidebar-link a:active {
+  transform: scale(0.97);
+}
+
+/* Dropdown icon */
+.vc-chevron {
+  transition: transform 0.3s ease;
+}
+.vc-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+/* Submenu */
+.vc-sidebar-links .vc-sidebar-link ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  margin-top: 4px;
+  background: #1f3c63;
+  animation: vcSubmenuFade 0.3s ease;
+}
+@keyframes vcSubmenuFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Submenu links */
+.vc-sidebar-links .vc-sidebar-link ul li a {
+  display: block;
+  padding: 10px 25px;
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.25s ease;
+}
+.vc-sidebar-links .vc-sidebar-link ul li a:hover {
+  background: #2a5185;
+  padding-left: 28px;
+}
+.vc-sidebar-links .vc-sidebar-link ul li a.active {
+  background: #f58220;
+  font-weight: 500;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .vc-sidebar { width: 220px; }
+}
+
+@media (max-width: 768px) {
+  .vc-sidebar {
+    width: 100%;
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+  .vc-main { padding: 20px; } /* smaller screens */
+}
+
+@media (max-width: 320px) {
+  .vc-sidebar { width: 100%; }
+}
+
+/* Hide hero sections and breadcrumb */
+.vc-main .vc-hero,
+.vc-content [class$="-hero"] {
+  display: none;
+}
+
+.vc-main .pg-breadcrumb,
+.vc-main .breadcrumb,
+.vc-main [class*="breadcrumb"] {
+  display: none !important;
+}
+
+@keyframes vcFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
