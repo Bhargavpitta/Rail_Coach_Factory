@@ -61,7 +61,7 @@ import VendorApproval from "./pages/VendorCorner/VendorApproval";
 import VendorDirectory from "./pages/VendorCorner/VendorDirectory";
 import SuggestionsComplaints from "./pages/VendorCorner/SuggestionsComplaints";
 import MSMEPosition from "./pages/VendorCorner/MSMEPosition";
-import SimilarItemsTender from "./pages/VendorCorner/SimilarItemstender";
+import SimilarItemsTender from "./pages/VendorCorner/Similaritemstender";
 import VendorDirMechanical from "./pages/VendorCorner/VendorDirMechanical";
 import VendorDirElectrical from "./pages/VendorCorner/VendorDirElectrical";
 import RegisteredVendors from "./pages/VendorCorner/RegisteredVendors";
