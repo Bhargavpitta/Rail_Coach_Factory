@@ -1,4 +1,4 @@
-import "./RegisteredVendors.css";
+import "./Registeredvendors.css";
 import { Link } from "react-router-dom";
 
 const RegisteredVendors = () => {
