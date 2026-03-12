@@ -122,36 +122,51 @@ const Navbar = () => {
         { label: "Bid Document & IRS Conditions", path: "/tenders/bid-documents" }
       ]
     },
-    {
-      to: "/vendors", label: "Vendor Corner",
-      dropdown: [
-        { label: "Important Notice for Vendors", path: "/vendor/notice" },
-        { label: "List of Stores Officer", path: "/vendor/stores-officer" },
-        { label: "Product Gallery", path: "/vendor/gallery" },
-        { label: "Vendor Registration for Tender", path: "/vendor/registration" },
-        { label: "Vendor Login", path: "/vendor/login" },
-        { label: "Vendor Development", path: "/vendor/development" },
-        {
-          label: "Vendor Directory",
-          path: "/vendor/directory",
-          subDropdown: [
-            { label: "Mechanical", path: "/vendor/dir/mech" },
-            { label: "Electrical", path: "/vendor/dir/elec" }
-          ]
-        },
-        {
-          label: "Electrical Design Specs",
-          path: "/vendor/specs",
-          subDropdown: [
-            { label: "EDTS", path: "/vendor/specs/edts" },
-            { label: "EDML", path: "/vendor/specs/edml" },
-            { label: "STR", path: "/vendor/specs/str" },
-            { label: "Coach Drawings", path: "/vendor/specs/drawings" }
-          ]
-        },
-        { label: "Vendor Suggestions/Complaints", path: "/vendor/complaints" }
-      ]
+   {
+            to: "/vendor-corner",
+            label: "Vendor Corner",
+            dropdown: [
+              { label: "Important Notice for Vendors", path: "/vendor-corner/important-notice" },
+              { label: "List of Stores Officer", path: "/vendor-corner/stores-officer" },
+              { label: "Product Gallery", path: "/vendor-corner/product-gallery" },
+              { label: "Vendor Registration for Tender Downloading", path: "/vendor-corner/vendor-registration" },
+              { label: "Vendor Login", path: "/vendor-corner/vendor-login" },
+              { label: "New Specifications For Comment", path: "/vendor-corner/new-specifications" },
+              { label: "M and P Specifications", path: "/vendor-corner/mp-specifications" },
+              { label: "Vendor Development", path: "/vendor-corner/vendor-development" },
+              { label: "Procedure for New / Renewal of Registration", path: "/vendor-corner/registration-procedure" },
+              { label: "PL Unification", path: "/vendor-corner/pl-unification" },
+
+              {
+                label: "Vendor Directory",
+                path: "/vendor-corner/vendor-directory",
+                subDropdown: [
+                  { label: "Vendor Directory Mechanical", path: "/vendor-corner/vendor-directory/mechanical" },
+                  { label: "Vendor Directory Electrical", path: "/vendor-corner/vendor-directory/electrical" },
+                  { label: "List of Registered Vendors", path: "/vendor-corner/vendor-directory/registered-vendors" },
+                  { label: "STR and ISP-04 for Mech. Item", path: "/vendor-corner/vendor-directory/str-isp04" },
+                  { label: "MDTS Specification", path: "/vendor-corner/vendor-directory/mdts" }
+                ]
+              },
+
+              {
+                label: "Electrical Design Specifications",
+                path: "/vendor-corner/electrical-design",
+                subDropdown: [
+                  { label: "EDTS", path: "/vendor-corner/electrical-design/edts" },
+                  { label: "EDML", path: "/vendor-corner/electrical-design/edml" },
+                  { label: "STR", path: "/vendor-corner/electrical-design/str" },
+                  { label: "CAI", path: "/vendor-corner/electrical-design/cai" },
+                  { label: "Coach Drawings", path: "/vendor-corner/electrical-design/coach-drawings" }
+                ]
     },
+
+    { label: "Vendor Suggestions and Complaints", path: "/vendor-corner/suggestions-complaints" },
+    { label: "MSME Position", path: "/vendor-corner/msme-position" },
+    { label: "I Card and Pass Forms", path: "/vendor-corner/icard-pass-forms" },
+    { label: "List of Similar Items for Tender", path: "/vendor-corner/similar-items-tender" }
+  ]
+},
     {
       to: "/contact", label: "Contact Us",
       dropdown: [

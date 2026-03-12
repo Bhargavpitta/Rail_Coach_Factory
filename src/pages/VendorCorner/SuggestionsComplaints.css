@@ -1,0 +1,37 @@
+/* SuggestionsComplaints.css */
+.sc-main { font-family: "Arial", sans-serif; background: #f5f7fa; min-height: 100vh; }
+.sc-hero { background: linear-gradient(135deg, #003580 0%, #0055b3 100%); padding: 56px 24px 48px; }
+.sc-hero-inner { max-width: 1100px; margin: 0 auto; }
+.sc-hero-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #d0e8ff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.22); margin-bottom: 18px; }
+.sc-hero-title { font-family: "Georgia", serif; font-size: 2.2rem; color: #fff; margin: 0 0 14px; font-weight: 700; }
+.sc-hero-subtitle { font-size: 1rem; color: #b8d8f8; max-width: 580px; line-height: 1.65; margin: 0; }
+.sc-breadcrumb { background: #fff; border-bottom: 1px solid #e0e8f0; }
+.sc-breadcrumb-inner { max-width: 1100px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 0.85rem; }
+.sc-breadcrumb a { color: #0055b3; text-decoration: none; }
+.sc-breadcrumb a:hover { text-decoration: underline; }
+.sc-breadcrumb span:last-child { color: #4a5568; font-weight: 500; }
+.sc-sep { color: #aab0ba; }
+
+.sc-section { background: #fff; border: 1px solid #e0e8f0; border-radius: 14px; padding: 32px; box-shadow: 0 2px 10px rgba(0,53,128,0.05); }
+.sc-section-title { font-family: "Georgia", serif; font-size: 1.3rem; color: #1a2940; margin: 0 0 28px; padding-bottom: 14px; border-bottom: 2px solid #e0eaf5; text-align: center; }
+.sc-dept-list { display: flex; flex-direction: column; gap: 28px; }
+.sc-dept-block { display: flex; flex-direction: column; gap: 12px; }
+.sc-dept-heading { display: flex; align-items: center; gap: 12px; }
+.sc-dept-letter { display: inline-flex; align-items: center; justify-content: center; padding: 4px 12px; border-radius: 6px; color: #fff; font-size: 0.85rem; font-weight: 700; font-family: "Georgia", serif; flex-shrink: 0; }
+.sc-dept-name { font-size: 0.9rem; font-weight: 700; color: #1a2940; text-transform: uppercase; letter-spacing: 0.08em; }
+.sc-table-wrapper { overflow-x: auto; border-radius: 10px; border: 1px solid #d0dcea; }
+.sc-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.sc-table thead tr { background: #eef2f8; }
+.sc-table thead th { padding: 11px 16px; text-align: left; color: #1a2940; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; border-bottom: 2px solid #d0dcea; }
+.sc-th-sno { width: 70px; text-align: center !important; }
+.sc-table tbody tr { border-bottom: 1px solid #eef2f8; transition: background 0.15s; }
+.sc-table tbody tr:hover { background: #f0f6ff; }
+.sc-table tbody tr:last-child { border-bottom: none; }
+.sc-table tbody td { padding: 13px 16px; color: #2d3a4a; vertical-align: middle; }
+.sc-td-sno { text-align: center; font-weight: 700; color: #003580; }
+.sc-td-name { font-weight: 600; }
+.sc-td-desig { color: #5a6a7e; font-size: 0.84rem; }
+.sc-email-link { color: #0055b3; text-decoration: none; font-weight: 500; }
+.sc-email-link:hover { text-decoration: underline; }
+@media (max-width: 768px) { .sc-hero-title { font-size: 1.6rem; } .sc-section { padding: 20px 16px; } }
+@media (max-width: 320px) { .sc-hero-title { font-size: 1.2rem; } }

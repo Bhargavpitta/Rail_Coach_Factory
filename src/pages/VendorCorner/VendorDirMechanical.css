@@ -1,0 +1,33 @@
+/* VendorDirMechanical.css */
+.vdm-main { font-family: "Arial", sans-serif; background: #f5f7fa; min-height: 100vh; }
+.vdm-hero { background: linear-gradient(135deg, #003580 0%, #0055b3 100%); padding: 56px 24px 48px; }
+.vdm-hero-inner { max-width: 1100px; margin: 0 auto; }
+.vdm-hero-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #d0e8ff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.22); margin-bottom: 18px; }
+.vdm-hero-title { font-family: "Georgia", serif; font-size: 2.2rem; color: #fff; margin: 0 0 14px; font-weight: 700; }
+.vdm-hero-subtitle { font-size: 1rem; color: #b8d8f8; max-width: 580px; line-height: 1.65; margin: 0; }
+.vdm-breadcrumb { background: #fff; border-bottom: 1px solid #e0e8f0; }
+.vdm-breadcrumb-inner { max-width: 1100px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 0.85rem; }
+.vdm-breadcrumb a { color: #0055b3; text-decoration: none; }
+.vdm-breadcrumb a:hover { text-decoration: underline; }
+.vdm-breadcrumb span:last-child { color: #4a5568; font-weight: 500; }
+.vdm-sep { color: #aab0ba; }
+.vdm-section { background: #fff; border: 1px solid #e0e8f0; border-radius: 14px; padding: 32px; box-shadow: 0 2px 10px rgba(0,53,128,0.05); display: flex; flex-direction: column; gap: 24px; }
+.vdm-section-title { font-family: "Georgia", serif; font-size: 1.3rem; color: #1a2940; margin: 0; padding-bottom: 14px; border-bottom: 2px solid #e0eaf5; }
+.vdm-uvam-banner { display: flex; align-items: center; gap: 14px; padding: 18px 22px; background: linear-gradient(135deg, #eef5ff, #dceeff); border: 1px solid #b3d0f0; border-radius: 12px; }
+.vdm-uvam-icon { font-size: 1.5rem; flex-shrink: 0; }
+.vdm-uvam-link { font-size: 0.95rem; color: #003580; font-weight: 700; text-decoration: none; }
+.vdm-uvam-link:hover { text-decoration: underline; }
+.vdm-new-badge { display: inline-block; background: #e53e3e; color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-left: 8px; text-transform: uppercase; letter-spacing: 0.08em; vertical-align: middle; }
+.vdm-policy-block { background: #f8fafd; border: 1px solid #e4ecf5; border-radius: 12px; padding: 20px; }
+.vdm-links-list { display: flex; flex-direction: column; gap: 10px; }
+.vdm-link-item { display: flex; align-items: center; gap: 12px; padding: 13px 16px; background: #fff; border: 1px solid #e4ecf5; border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+.vdm-link-item:hover { background: #eef5ff; border-color: #b3d0f0; transform: translateX(3px); }
+.vdm-link-icon { font-size: 1.1rem; flex-shrink: 0; }
+.vdm-link-text { flex: 1; font-size: 0.9rem; color: #0055b3; font-weight: 500; }
+.vdm-link-arrow { color: #0055b3; font-size: 0.95rem; transition: transform 0.2s; }
+.vdm-link-item:hover .vdm-link-arrow { transform: translateX(3px); }
+.vdm-additional-block { display: flex; flex-direction: column; gap: 10px; background: #fffbf0; border: 1px solid #ffe082; border-radius: 12px; padding: 18px 20px; }
+.vdm-additional-link { font-size: 0.9rem; color: #0055b3; text-decoration: none; font-weight: 500; padding: 4px 0; }
+.vdm-additional-link:hover { text-decoration: underline; }
+@media (max-width: 768px) { .vdm-hero-title { font-size: 1.6rem; } .vdm-section { padding: 20px 16px; } }
+@media (max-width: 320px) { .vdm-hero-title { font-size: 1.2rem; } }

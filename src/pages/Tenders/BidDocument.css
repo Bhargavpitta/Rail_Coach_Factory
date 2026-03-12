@@ -9,7 +9,8 @@
 }
 
 .bid-card-header {
-  background: var(--rcf-navy);
+  background:white;
+  color: black;
   padding: 14px 22px;
 }
 

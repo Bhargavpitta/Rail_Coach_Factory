@@ -1,0 +1,152 @@
+/* VendorDirectory.css */
+
+.vd2-main {
+  font-family: "Arial", sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.vd2-hero {
+  background: linear-gradient(135deg, #003580 0%, #0055b3 100%);
+  padding: 56px 24px 48px;
+}
+.vd2-hero-inner { max-width: 1100px; margin: 0 auto; }
+
+.vd2-hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: #d0e8ff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.22);
+  margin-bottom: 18px;
+}
+
+.vd2-hero-title {
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.vd2-hero-subtitle {
+  font-size: 1rem;
+  color: #b8d8f8;
+  max-width: 580px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.vd2-breadcrumb { background: #fff; border-bottom: 1px solid #e0e8f0; }
+.vd2-breadcrumb-inner {
+  max-width: 1100px; margin: 0 auto; padding: 12px 24px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 0.85rem;
+}
+.vd2-breadcrumb a { color: #0055b3; text-decoration: none; }
+.vd2-breadcrumb a:hover { text-decoration: underline; }
+.vd2-breadcrumb span:last-child { color: #4a5568; font-weight: 500; }
+.vd2-sep { color: #aab0ba; }
+
+
+.vd2-section {
+  background: #fff;
+  border: 1px solid #e0e8f0;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 2px 10px rgba(0,53,128,0.05);
+}
+
+.vd2-section-title {
+  font-family: "Georgia", serif;
+  font-size: 1.3rem;
+  color: #1a2940;
+  margin: 0 0 28px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e0eaf5;
+}
+
+.vd2-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.vd2-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 18px;
+  background: #f8fafd;
+  border: 1px solid #e0eaf5;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,53,128,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.vd2-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #003580, #0077e6);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.vd2-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,53,128,0.12);
+  border-color: #b3d0ee;
+}
+
+.vd2-card:hover::before { opacity: 1; }
+
+.vd2-card-icon { font-size: 1.8rem; }
+
+.vd2-card-title {
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a2940;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.vd2-card-desc {
+  font-size: 0.8rem;
+  color: #5a6a7e;
+  line-height: 1.55;
+  margin: 0;
+  flex: 1;
+}
+
+.vd2-card-arrow {
+  color: #0055b3;
+  font-size: 1rem;
+  align-self: flex-end;
+  transition: transform 0.2s;
+}
+
+.vd2-card:hover .vd2-card-arrow { transform: translateX(4px); }
+
+@media (max-width: 1024px) {
+  .vd2-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .vd2-hero-title { font-size: 1.6rem; }
+  .vd2-section { padding: 20px 16px; }
+  .vd2-cards-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 320px) {
+  .vd2-hero-title { font-size: 1.2rem; }
+}

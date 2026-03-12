@@ -1,0 +1,264 @@
+/* ElectricalDesign.css */
+
+.ed-main {
+  font-family: "Arial", sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.ed-hero {
+  background: linear-gradient(135deg, #003580 0%, #0055b3 100%);
+  padding: 56px 24px 48px;
+}
+
+.ed-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ed-hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: #d0e8ff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  margin-bottom: 18px;
+}
+
+.ed-hero-title {
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.ed-hero-subtitle {
+  font-size: 1rem;
+  color: #b8d8f8;
+  max-width: 580px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Breadcrumb */
+.ed-breadcrumb {
+  background: #fff;
+  border-bottom: 1px solid #e0e8f0;
+}
+
+.ed-breadcrumb-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.ed-breadcrumb a {
+  color: #0055b3;
+  text-decoration: none;
+}
+
+.ed-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.ed-breadcrumb span:last-child {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.ed-sep {
+  color: #aab0ba;
+}
+
+
+.ed-section {
+  background: #fff;
+  border: 1px solid #e0e8f0;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 2px 10px rgba(0, 53, 128, 0.05);
+}
+
+.ed-section-title {
+  font-family: "Georgia", serif;
+  font-size: 1.3rem;
+  color: #1a2940;
+  margin: 0 0 28px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e0eaf5;
+}
+
+/* Cards */
+.ed-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ed-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 20px 20px 16px;
+  background: #f8fafd;
+  border: 1.5px solid #e0eaf5;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.ed-card:hover {
+  background: #eef5ff;
+  border-color: #b3d0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 53, 128, 0.1);
+}
+
+.ed-card--active {
+  background: linear-gradient(135deg, #eef5ff, #dceeff);
+  border-color: #0055b3;
+  box-shadow: 0 6px 20px rgba(0, 85, 179, 0.15);
+}
+
+.ed-card-label {
+  display: inline-block;
+  background: #003580;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.ed-card--active .ed-card-label {
+  background: #0055b3;
+}
+
+.ed-card-title {
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  color: #1a2940;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.ed-card-desc {
+  font-size: 0.8rem;
+  color: #5a6a7e;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.ed-card-arrow {
+  font-size: 1rem;
+  color: #0055b3;
+  align-self: flex-end;
+  margin-top: 4px;
+  transition: transform 0.2s;
+}
+
+.ed-card:hover .ed-card-arrow {
+  transform: translateX(3px);
+}
+
+/* Detail Panel */
+.ed-detail-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 28px;
+  background: #f0f8ff;
+  border: 1px solid #b3d0f0;
+  border-radius: 12px;
+  animation: slideDown 0.2s ease;
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ed-detail-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.ed-detail-panel h3 {
+  font-family: "Georgia", serif;
+  font-size: 1.05rem;
+  color: #1a2940;
+  margin: 0 0 8px;
+}
+
+.ed-detail-panel p {
+  font-size: 0.875rem;
+  color: #4a5568;
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+.ed-detail-link {
+  font-size: 0.875rem;
+  color: #0055b3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.ed-detail-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ed-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ed-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .ed-section {
+    padding: 20px 16px;
+  }
+
+  .ed-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ed-detail-panel {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 320px) {
+  .ed-hero-title {
+    font-size: 1.2rem;
+  }
+}

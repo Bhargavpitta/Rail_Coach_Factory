@@ -9,8 +9,8 @@
 }
 
 .ssc-card-header {
-  background: var(--rcf-navy);
   padding: 14px 22px;
+  background: white;
 }
 
 .ssc-card-title {
