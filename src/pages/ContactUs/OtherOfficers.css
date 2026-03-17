@@ -1,0 +1,142 @@
+/* OtherOfficers.css */
+.oo-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+
+.oo-factory-header {
+  background: #fff;
+  border: 1px solid #d0dcea;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.oo-factory-header h3 {
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  color: #1a2940;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.oo-factory-header p {
+  font-size: 0.85rem;
+  color: #2d3a4a;
+  margin: 3px 0;
+}
+
+.oo-office-hours {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  background: #f8fafd;
+  border: 1px solid #d0dcea;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.oo-office-hours strong {
+  display: block;
+  color: #003580;
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+}
+
+.oo-office-hours p { margin: 2px 0; color: #4a5568; }
+
+.oo-note {
+  font-size: 0.83rem;
+  color: #2d3a4a;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  background: #f0f6ff;
+  border-left: 3px solid #003580;
+  border-radius: 4px;
+}
+
+.oo-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.oo-filter-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2d3a4a;
+}
+
+.oo-select {
+  padding: 9px 14px;
+  border: 1.5px solid #d0dcea;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: #1a2940;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+  min-width: 200px;
+  transition: border-color 0.2s;
+}
+
+.oo-select:focus {
+  border-color: #0055b3;
+  box-shadow: 0 0 0 3px rgba(0,85,179,0.1);
+}
+
+.oo-table-section { margin-top: 8px; }
+
+.oo-table-title {
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  color: #1a2940;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.oo-table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #d0dcea;
+}
+
+.oo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.oo-table thead tr {
+  background: #f58220;
+}
+
+.oo-table thead th {
+  padding: 11px 14px;
+  text-align: left;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.oo-table tbody tr { border-bottom: 1px solid #eef2f8; transition: background 0.15s; }
+.oo-table tbody tr:hover { background: #f0f6ff; }
+.oo-table tbody tr:last-child { border-bottom: none; }
+.oo-table tbody td { padding: 12px 14px; color: #2d3a4a; vertical-align: middle; }
+
+.oo-empty-row {
+  text-align: center !important;
+  color: #5a6a7e !important;
+  font-style: italic;
+  padding: 24px 14px !important;
+}
+
+@media (max-width: 768px) {
+  .oo-office-hours { grid-template-columns: 1fr; }
+  .oo-filter-row { flex-direction: column; align-items: flex-start; }
+}

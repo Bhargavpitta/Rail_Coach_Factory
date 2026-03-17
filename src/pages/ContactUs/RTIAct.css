@@ -1,0 +1,125 @@
+/* RTIAct.css */
+.rtia-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+
+.rtia-intro {
+  font-size: 0.87rem;
+  color: #2d3a4a;
+  line-height: 1.65;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.rtia-header-box {
+  background: #003580;
+  color: #fff;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.rtia-section-title {
+  background: #fff;
+  color:black;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  border-radius: 6px 6px 0 0;
+  margin: 20px 0 0;
+  font-family: "Arial", sans-serif;
+  border: 1px solid #d0dcea;
+  border-bottom: none;
+}
+
+/* Table Wrapper */
+.rtia-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #d0dcea;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 24px;
+}
+
+/* Table */
+.rtia-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+/* Table Header */
+.rtia-table thead tr {
+  background:#003580;;
+}
+
+.rtia-table thead th {
+  padding: 10px 12px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #d0dcea;
+}
+
+.rtia-table thead th:last-child { border-right: none; }
+
+.rtia-th-sno { width: 60px; }
+.rtia-th-item { width: 28%; }
+.rtia-th-remarks { width: 28%; }
+
+/* Table Body */
+.rtia-table tbody tr {
+  border-bottom: 1px solid #d0dcea;
+  transition: background 0.15s;
+}
+
+.rtia-table tbody tr:hover { background: #f8fafd; }
+.rtia-table tbody tr:last-child { border-bottom: none; }
+
+.rtia-table tbody td {
+  padding: 10px 12px;
+  color: #2d3a4a;
+  vertical-align: top;
+  line-height: 1.5;
+  border-right: 1px solid #d0dcea;
+  font-size: 0.84rem;
+}
+
+.rtia-table tbody td:last-child { border-right: none; }
+
+.rtia-td-center {
+  text-align: center;
+  font-weight: 600;
+  color: #003580;
+  white-space: nowrap;
+}
+
+.rtia-table tbody td p {
+  margin: 0 0 4px;
+  line-height: 1.5;
+}
+
+.rtia-table tbody td p:last-child { margin-bottom: 0; }
+
+.rtia-link {
+  color: #0055b3;
+  text-decoration: underline;
+  font-size: 0.84rem;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+.rtia-link:hover { color: #003580; }
+
+@media (max-width: 768px) {
+  .rtia-table th,
+  .rtia-table td {
+    padding: 8px 8px;
+    font-size: 0.78rem;
+  }
+}

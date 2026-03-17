@@ -1,0 +1,143 @@
+/* RCFGrievances.css */
+.rcfg-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+
+/* Tree container */
+.rcfg-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* Nodes */
+.rcfg-node {
+  background: #6ec6f0;
+  border: 1px solid #4aa8d8;
+  border-radius: 4px;
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.5;
+}
+
+.rcfg-node-root {
+  width: 160px;
+  background: #6ec6f0;
+}
+
+/* Root row */
+.rcfg-tree-root-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Connector from root down */
+.rcfg-connector-root {
+  width: 2px;
+  height: 30px;
+  background: #000;
+  margin: 0 auto;
+}
+
+/* Horizontal line spanning all 3 branches */
+.rcfg-horizontal-line {
+  width: 66%;
+  height: 2px;
+  background: #000;
+  margin: 0 auto;
+}
+
+/* Branch row - 3 connectors going down */
+.rcfg-branch-row {
+  display: flex;
+  justify-content: space-between;
+  width: 66%;
+}
+
+.rcfg-branch-connector {
+  width: 2px;
+  height: 30px;
+  background: #000;
+}
+
+/* Level 2 row */
+.rcfg-level2-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.rcfg-node-level2 {
+  flex: 1;
+  background: #6ec6f0;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Level 2 connectors going down */
+.rcfg-level2-connectors {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rcfg-connector-down {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.rcfg-connector-down::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 30px;
+  background: #000;
+}
+
+/* Level 3 row */
+.rcfg-level3-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.rcfg-node-level3 {
+  flex: 1;
+  background: #6ec6f0;
+  font-weight: 400;
+  text-align: left;
+  padding: 14px 16px;
+}
+
+.rcfg-node-level3 p {
+  margin: 0 0 4px;
+  font-size: 0.86rem;
+  color: #000;
+}
+
+.rcfg-link {
+  color: #003580;
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+.rcfg-link:hover { color: #0055b3; }
+
+@media (max-width: 768px) {
+  .rcfg-horizontal-line { width: 90%; }
+  .rcfg-branch-row { width: 90%; }
+  .rcfg-level2-row { flex-direction: column; gap: 0; }
+  .rcfg-level3-row { flex-direction: column; gap: 10px; }
+  .rcfg-node-level2 { min-height: unset; }
+  .rcfg-level2-connectors { display: none; }
+}

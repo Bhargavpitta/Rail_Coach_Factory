@@ -17,7 +17,6 @@ import GeneralManagers from "./pages/AboutRCF/GeneralManagers";
 import AboutRCF from "./components/navitems/AboutRCF";
 import Aboutrcf from "./pages/AboutRCF/AboutRCFPage";
 import TenderInfo from "./components/navitems/TenderInfo";
-import ContactUs from "./components/navitems/ContactUs";
 import Products from "./components/navitems/Products";
 import StaffCorner from "./components/navitems/StaffCorner";
 import Vendor from "./components/navitems/Vendor";
@@ -25,14 +24,12 @@ import OrganisationStructure from "./pages/AboutRCF/OrganisationStructure";
 import Environment from "./pages/AboutRCF/Environment";
 
 import TendersLayout from "./pages/Tenders/TendersLayout";
-
 import Tenders from "./pages/Tenders/Tenders";
 import ExpressionOfInterest from "./pages/Tenders/ExpressionOfInterest";
 import AwardedTenders from "./pages/Tenders/AwardedTenders";
 import SurplusItems from "./pages/Tenders/SurplusItems";
 import StoreSupplyContracts from "./pages/Tenders/StoreSupplyContracts";
 import BidDocument from "./pages/Tenders/BidDocument";
-
 
 
 import AnnualReports from "./pages/AboutRCF/AnnualReports";
@@ -67,6 +64,29 @@ import VendorDirElectrical from "./pages/VendorCorner/VendorDirElectrical";
 import RegisteredVendors from "./pages/VendorCorner/RegisteredVendors";
 import STRAndISP04 from "./pages/VendorCorner/STRAndISP04";
 import MDTSSpecification from "./pages/VendorCorner/MDTSSpecification";
+
+import ContactUs from "./pages/ContactUs/ContactUs";
+import mapImage from "../../assets/images/rr.jpg";
+import crisbanner from "../../assets/images/crisbanner.gif";
+import SeniorManagement from "./pages/ContactUs/SeniorManagement";
+import OtherOfficers from "./pages/ContactUs/OtherOfficers";
+import StaffGrievances from "./pages/ContactUs/StaffGrievances";
+import NodalOfficer from "./pages/ContactUs/NodalOfficer";
+import CustomerFeedback from "./pages/ContactUs/CustomerFeedback";
+import Vigilance from "./pages/ContactUs/Vigilance";
+import HowToReach from "./pages/ContactUs/HowToReach";
+import RTI from "./pages/ContactUs/RTI";
+import RTIAct from "./pages/ContactUs/RTIAct";
+import RCFGrievances from "./pages/ContactUs/RCFGrievances";
+import CitizenCharter from "./pages/ContactUs/CitizenCharter";
+import ImportantLinks from "./pages/ContactUs/ImportantLinks";
+import Sitemap from "./pages/ContactUs/Sitemap";
+import OtherRailwaySites from "./pages/ContactUs/OtherRailwaySites";
+import PrivacyPolicy from "./pages/ContactUs/PrivacyPolicy";
+import TermsConditions from "./pages/ContactUs/TermsConditions";
+import Help from "./pages/ContactUs/Help";
+import Disclaimer from "./pages/ContactUs/Disclaimer";
+import Feedback from "./pages/ContactUs/Feedback";
 
 const queryClient = new QueryClient();
 
@@ -104,7 +124,6 @@ const App = () => (
                 <Route path="/products" element={<Products />} />
                 <Route path="/Staffcorner" element={<StaffCorner />} />
                 <Route path="/vendors" element={<Vendor />} />
-                <Route path="/contact" element={<ContactUs />} />
                 <Route path="/news" element={<News />} />
 
               {/* Tenders */}
@@ -142,18 +161,41 @@ const App = () => (
                   <Route path="vendor-development" element={<VendorDevelopment />} />
                   <Route path="registration-procedure" element={<RegistrationProcedure />} />
                   <Route path="pl-unification" element={<PLUnification />} />
-                    <Route path="vendor-directory" element={<VendorDirectory />} />
-          <Route path="vendor-directory/mechanical" element={<VendorDirMechanical />} />
-          <Route path="vendor-directory/electrical" element={<VendorDirElectrical />} />
-          <Route path="vendor-directory/registered-vendors" element={<RegisteredVendors />} />
-          <Route path="vendor-directory/str-isp04" element={<STRAndISP04 />} />
-          <Route path="vendor-directory/mdts" element={<MDTSSpecification />} />
+                  <Route path="vendor-directory" element={<VendorDirectory />} />
+                  <Route path="vendor-directory/mechanical" element={<VendorDirMechanical />} />
+                  <Route path="vendor-directory/electrical" element={<VendorDirElectrical />} />
+                  <Route path="vendor-directory/registered-vendors" element={<RegisteredVendors />} />
+                  <Route path="vendor-directory/str-isp04" element={<STRAndISP04 />} />
+                  <Route path="vendor-directory/mdts" element={<MDTSSpecification />} />
                   <Route path="electrical-design" element={<ElectricalDesign />} />
                   <Route path="suggestions-complaints" element={<SuggestionsComplaints />} />
                   <Route path="msme-position" element={<MSMEPosition />} />
                   <Route path="icard-pass-forms" element={<ICardPassForms />} />
                   <Route path="similar-items-tender" element={<SimilarItemsTender />} />
                 </Route>
+
+              <Route path="/contact" element={<ContactUs />}>
+                <Route path="senior-management" element={<SeniorManagement />} />
+                <Route path="other-officers" element={<OtherOfficers />} />
+                <Route path="staff-grievances" element={<StaffGrievances />} />
+                <Route path="nodal-officer" element={<NodalOfficer />} />
+                <Route path="customer-feedback" element={<CustomerFeedback />} />
+                <Route path="vigilance" element={<Vigilance />} />
+                <Route path="how-to-reach" element={<HowToReach />} />
+                <Route path="rti" element={<RTI />} />
+                <Route path="rti/rti-act" element={<RTIAct />} />
+                <Route path="rti/rcf-grievances" element={<RCFGrievances />} />
+
+                <Route path="citizen-charter" element={<CitizenCharter />} />
+                <Route path="important-links" element={<ImportantLinks />} />
+                <Route path="sitemap" element={<Sitemap />} />
+                <Route path="other-railway-sites" element={<OtherRailwaySites />} />
+                <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="terms-conditions" element={<TermsConditions />} />
+                <Route path="help" element={<Help />} />
+                <Route path="disclaimer" element={<Disclaimer />} />
+                <Route path="feedback" element={<Feedback />} />
+              </Route>
 
                 {/* Fallback for unknown routes */}
                 <Route path="*" element={<NotFound />} />

@@ -167,17 +167,33 @@ const Navbar = () => {
     { label: "List of Similar Items for Tender", path: "/vendor-corner/similar-items-tender" }
   ]
 },
-    {
+        {
       to: "/contact", label: "Contact Us",
       dropdown: [
         { label: "Contact Details of Senior Management", path: "/contact/senior-management" },
-        { label: "Other Officers Contact Numbers", path: "/contact/officers" },
-        { label: "Nodal Officer for e-Gazette", path: "/contact/e-gazette" },
-        { label: "Customer Feedback", path: "/contact/feedback" },
-        { label: "How to Reach RCF", path: "/contact/location" },
-        { label: "Right To Information", path: "/contact/rti" },
-        { label: "Citizen Charter", path: "/contact/charter" },
-        { label: "Public Grievance", path: "/contact/grievance" }
+        { label: "Other Officers' Contact Numbers", path: "/contact/other-officers" },
+        { label: "Staff Grievances", path: "/contact/staff-grievances" },
+        { label: "Nodal Officer for e-Gazette", path: "/contact/nodal-officer" },
+        { label: "Customer Feedback", path: "/contact/customer-feedback" },
+        { label: "Vigilance", path: "/contact/vigilance" },
+        { label: "How to Reach RCF", path: "/contact/how-to-reach" },
+        {
+          label: "Right To Information",
+          path: "/contact/rti",
+          subDropdown: [
+            { label: "Information under section 4(1)b of RTI Act", path: "/contact/rti/rti-act" },
+            { label: "RCF Related Grievances", path: "/contact/rti/rcf-grievances" },
+          ]
+        },
+        { label: "Citizen Charter", path: "/contact/citizen-charter" },
+        { label: "Important Links", path: "/contact/important-links" },
+        { label: "Sitemap", path: "/contact/sitemap" },
+        { label: "Other Railway Sites", path: "/contact/other-railway-sites" },
+        { label: "Privacy Policy", path: "/contact/privacy-policy" },
+        { label: "Terms and Conditions", path: "/contact/terms-conditions" },
+        { label: "Help", path: "/contact/help" },
+        { label: "Disclaimer", path: "/contact/disclaimer" },
+        { label: "Feedback", path: "/contact/feedback" },
       ]
     },
     {

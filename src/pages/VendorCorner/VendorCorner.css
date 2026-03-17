@@ -12,17 +12,17 @@ VendorCorner Page Styling (Updated Spacing)
   font-family: "Georgia", "Times New Roman", serif;
   color: hsl(228, 55%, 45%);
   margin-bottom: 12px;
-  font-weight: 800;
+  font-weight: 700 !important;
   line-height: 1.3;
 }
 
 /* Main Title */
 .vc-container .main-title {
   font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: 700 !important;
   color: hsl(228, 55%, 45%);
-  margin-top: 24px;       /* Space from navbar */
-  margin-bottom: 24px;    /* Space below heading */
+   margin-top: 24px;       /* space from navbar */
+  margin-bottom: 4px; 
   position: relative;
   gap: 28px;
   padding: 0;             /* No background or border */
@@ -34,18 +34,14 @@ VendorCorner Page Styling (Updated Spacing)
   height: 4px;
   background-color: #ffc107;
   border-radius: 2px;
-  margin-top: 4px;
+   margin-top: 4px;           /* no extra space, sits directly under title */
+  margin-bottom: 50px;
 }
 
-/* Responsive headings */
-@media (min-width: 768px) {
-  .vc-container .main-title {
-    font-size: 1.9rem;
-  }
   .vc-container .title-underline {
     width: 70px;
   }
-}
+
 
 @media (min-width: 1024px) {
   .vc-container .main-title {
@@ -63,18 +59,30 @@ VendorCorner Page Styling (Updated Spacing)
   }
 }
 
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .vc-container .main-title { font-size: 1.9rem; }
+  .vc-container .title-underline { width: 70px; }
+}
+
+@media (min-width: 1280px) {
+  .vc-container .main-title { font-size: 2.3rem; }
+  .vc-container .title-underline { width: 80px; height: 5px; }
+}
+
 /* =============================
 PAGE
 ============================= */
 
 .vc-main {
   font-family: "Georgia", "Times New Roman", serif;
+  border-top: 10px solid #a2bfec;
   background: #f4f6f9;
-  min-height: 100vh;
+  min-height:auto;
   display: flex;
   flex-direction: column;
   gap: 32px;              /* Space between sections */
-padding: 10px 32px 0 10px; /* top 24px, right 32px, bottom 0, left 0 */
+   padding: 0px 32px 40px 0px; /* 👈 increased bottom padding */
   animation: vcFadeIn 0.45s ease;
 }
 
@@ -84,8 +92,7 @@ padding: 10px 32px 0 10px; /* top 24px, right 32px, bottom 0, left 0 */
   grid-template-columns: 260px 1fr;
   gap: 32px;
   width: 100%;
-  min-height: 100vh;
-  padding: 0;
+  min-height: auto;
   align-items: start;
 }
 
@@ -96,10 +103,6 @@ padding: 10px 32px 0 10px; /* top 24px, right 32px, bottom 0, left 0 */
   color: white;
   display: flex;
   flex-direction: column;
-  position: sticky;
-  top: 20px;
-  max-height: calc(100vh - 20px);
-  overflow-y: auto;
   scroll-behavior: smooth;
   z-index: 1000;
   border-radius: 8px;
@@ -216,6 +219,11 @@ padding: 10px 32px 0 10px; /* top 24px, right 32px, bottom 0, left 0 */
 }
 
 @media (max-width: 768px) {
+  
+ .vc-layout {
+    grid-template-columns: 1fr;
+  }
+  
   .vc-sidebar {
     width: 100%;
     position: static;

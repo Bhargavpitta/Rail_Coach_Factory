@@ -1,0 +1,92 @@
+/* ImportantLinks.css */
+.il-page { 
+  padding: 8px 0 40px; 
+  font-family: "Arial", sans-serif; 
+}
+
+.il-table-wrapper { 
+  overflow-x: auto; 
+  border-radius: 10px; 
+  border: 1px solid #d0dcea; 
+}
+
+.il-table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  font-size: 0.88rem; 
+}
+
+.il-table thead tr { 
+  background: linear-gradient(90deg, #003580, #0055b3); 
+}
+
+.il-table thead th { 
+  padding: 11px 18px; 
+  text-align: left; 
+  color: #fff; 
+  font-weight: 700; 
+  font-size: 0.8rem; 
+  letter-spacing: 0.04em; 
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.il-table thead th:last-child { 
+  border-right: none; 
+}
+
+.il-table tbody tr { 
+  border-bottom: 1px solid #d0dcea; 
+  transition: background 0.15s; 
+}
+
+.il-table tbody tr:hover { 
+  background: #f0f6ff; 
+}
+
+.il-table tbody tr:last-child { 
+  border-bottom: none; 
+}
+
+.il-table tbody td { 
+  padding: 13px 18px; 
+  color: #2d3a4a; 
+  vertical-align: middle;
+  border-right: 1px solid #d0dcea;
+}
+
+.il-table tbody td:last-child { 
+  border-right: none; 
+}
+
+.il-td-label { 
+  font-weight: 600; 
+  color: #1a2940; 
+  width: 60%; 
+}
+
+.il-link { 
+  color: #0055b3; 
+  text-decoration: none; 
+  font-weight: 500; 
+}
+
+.il-link:hover { 
+  text-decoration: underline; 
+}
+
+@media (max-width: 768px) { 
+  .il-table th, 
+  .il-table td { 
+    padding: 10px 12px; 
+    font-size: 0.82rem; 
+  } 
+}
+
+@media (max-width: 320px) { 
+  .il-table th, 
+  .il-table td { 
+    padding: 8px 10px; 
+    font-size: 0.78rem; 
+  } 
+}

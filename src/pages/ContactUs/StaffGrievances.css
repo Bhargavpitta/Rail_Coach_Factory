@@ -1,0 +1,24 @@
+/* StaffGrievances.css */
+.sg-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+.sg-header-box { background: linear-gradient(135deg, #003580, #0055b3); color: #fff; padding: 18px 24px; border-radius: 10px; margin-bottom: 24px; text-align: center; }
+.sg-header-box h3 { font-size: 1rem; margin: 0; letter-spacing: 0.04em; color: #fff; font-family: "Georgia", serif; }
+.sg-contact-box { background: #eef5ff; border: 1px solid #c0d8f0; border-radius: 10px; padding: 20px 24px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 12px; }
+.sg-contact-row { display: flex; align-items: center; gap: 14px; font-size: 0.9rem; flex-wrap: wrap; }
+.sg-key { font-weight: 700; color: #003580; min-width: 200px; }
+.sg-val { color: #1a2940; font-weight: 600; }
+.sg-email { color: #0055b3; text-decoration: none; font-weight: 600; }
+.sg-email:hover { text-decoration: underline; }
+.sg-address-block { background: #f8fafd; border: 1px solid #d0dcea; border-radius: 10px; padding: 16px 20px; margin-bottom: 20px; font-size: 0.88rem; color: #2d3a4a; line-height: 1.6; }
+.sg-address-block h4 { font-family: "Georgia", serif; color: #003580; margin: 0 0 8px; font-size: 0.95rem; }
+.sg-address-block p { margin: 2px 0; }
+.sg-sub-title { font-family: "Georgia", serif; font-size: 1rem; color: #1a2940; margin: 0 0 14px; }
+.sg-table-wrapper { overflow-x: auto; border-radius: 10px; border: 1px solid #d0dcea; }
+.sg-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.sg-table thead tr { background: linear-gradient(90deg, #003580, #0055b3); }
+.sg-table thead th { padding: 11px 14px; text-align: left; color: #fff; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.sg-table tbody tr { border-bottom: 1px solid #eef2f8; transition: background 0.15s; }
+.sg-table tbody tr:hover { background: #f0f6ff; }
+.sg-table tbody tr:last-child { border-bottom: none; }
+.sg-table tbody td { padding: 12px 14px; color: #2d3a4a; }
+.sg-td-center { text-align: center; font-weight: 600; color: #003580; }
+@media (max-width: 768px) { .sg-key { min-width: unset; } }
