@@ -1,0 +1,11 @@
+/* Sitemap.css */
+.smap-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+.smap-desc { font-size: 0.88rem; color: #2d3a4a; line-height: 1.65; margin-bottom: 24px; }
+.smap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.smap-group { background: #f8fafd; border: 1px solid #d0dcea; border-radius: 10px; padding: 18px 20px; }
+.smap-group-title { font-family: "Georgia", serif; font-size: 0.95rem; color: #003580; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 2px solid #e0eaf5; font-weight: 700; }
+.smap-group-list { padding-left: 16px; display: flex; flex-direction: column; gap: 6px; margin: 0; }
+.smap-group-list li { font-size: 0.83rem; }
+.smap-link { color: #0055b3; text-decoration: none; }
+.smap-link:hover { text-decoration: underline; }
+@media (max-width: 768px) { .smap-grid { grid-template-columns: 1fr; } }

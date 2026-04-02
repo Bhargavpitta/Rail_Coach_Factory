@@ -1,0 +1,6 @@
+/* CitizenCharter.css */
+.cc-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+.cc-list { padding-left: 24px; display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem; }
+.cc-list li { line-height: 1.5; }
+.cc-link { color: #0055b3; text-decoration: none; font-weight: 500; }
+.cc-link:hover { text-decoration: underline; }

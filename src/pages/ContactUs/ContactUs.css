@@ -1,0 +1,312 @@
+/* =============================
+ContactUs Page Styling
+============================= */
+/* ============================= */
+/* GLOBAL HEADING FIX FOR ALL SUBPAGES */
+/* ============================= */
+
+/* Allow flex children spacing */
+.cu-main {
+  gap: 24px !important; /* restore spacing between content blocks */
+}
+
+/* Force heading style with proper spacing */
+.cu-content h1,
+.cu-content h2,
+.cu-content h3,
+.cu-content h4,
+.cu-content h5,
+.cu-content h6 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: 800;
+  color: hsl(228, 55%, 45%);
+  line-height: 1.3;
+  margin-top: 24px !important;    /* space above heading */
+  margin-bottom: 16px !important; /* space below heading */
+}
+
+/* Page main title */
+.cu-content .main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 24px 0 16px 0 !important;
+  line-height: 1.3;
+   margin-top: 24px;       /* space from navbar */
+  margin-bottom: 4px; 
+}
+
+/* Underline spacing */
+.cu-content .title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #ffc107;
+  border-radius: 2px;
+  margin-top: 4px;           /* no extra space, sits directly under title */
+  margin-bottom: 50px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .cu-content .main-title { font-size: 1.9rem; }
+  .cu-content .title-underline { width: 70px; }
+}
+
+@media (min-width: 1024px) {
+  .cu-content .main-title { font-size: 2.1rem; }
+}
+
+@media (min-width: 1280px) {
+  .cu-content .main-title { font-size: 2.3rem; }
+  .cu-content .title-underline { width: 80px; height: 5px; }
+}
+
+
+/* =============================
+Vendor-style Content Wrapper
+============================= */
+
+.cu-content {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  min-height: 100%;
+}
+
+/* PAGE */
+.cu-main {
+  font-family: "Georgia", "Times New Roman", serif;
+ border-top: 10px solid #a2bfec;
+  background: #f4f6f9;
+  min-height:auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+ padding: 0px 32px 40px 0px;
+  animation: cuFadeIn 0.45s ease;
+}
+
+/* Layout */
+.cu-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  width: 100%;
+  min-height:auto;
+  padding-bottom: 20px;
+  align-items: start;
+}
+
+/* Sidebar */
+.cu-sidebar {
+  width: 260px;
+  background: #1f3c63;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  z-index: 1000;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(30, 92, 173, 0.12);
+  scrollbar-width: none;
+}
+
+.cu-sidebar::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.cu-sidebar-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 18px;
+  background: #162c4a;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.cu-sidebar-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.cu-sidebar-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cu-sidebar-link a,
+.cu-dropdown-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cu-sidebar-link a:hover,
+.cu-dropdown-title:hover {
+  background: #2a5185;
+  padding-left: 22px;
+}
+
+.cu-sidebar-link a.active,
+.cu-dropdown-title.active {
+  background: #f58220;
+  color: white;
+  font-weight: 600;
+}
+
+.cu-sidebar-link a:active {
+  transform: scale(0.97);
+}
+
+.cu-chevron {
+  transition: transform 0.3s ease;
+}
+.cu-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+.cu-sidebar-links .cu-sidebar-link ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  margin-top: 4px;
+  background: #1f3c63;
+  animation: cuSubmenuFade 0.3s ease;
+}
+
+@keyframes cuSubmenuFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cu-sidebar-links .cu-sidebar-link ul li a {
+  display: block;
+  padding: 10px 25px;
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+.cu-sidebar-links .cu-sidebar-link ul li a:hover {
+  background: #2a5185;
+  padding-left: 28px;
+}
+
+.cu-sidebar-links .cu-sidebar-link ul li a.active {
+  background: #f58220;
+  font-weight: 500;
+  color: white;
+}
+
+/* Hide hero/breadcrumb from child pages */
+.cu-main .cu-hero,
+.cu-content [class$="-hero"] { display: none; }
+
+.cu-main [class*="breadcrumb"] { display: none !important; }
+
+@keyframes cuFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cu-sidebar { width: 220px; }
+}
+
+@media (max-width: 768px) {
+  .cu-layout { grid-template-columns: 1fr; }
+  .cu-sidebar {
+    width: 100%;
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+  .cu-main { padding: 20px; }
+}
+
+@media (max-width: 320px) {
+  .cu-sidebar { width: 100%; }
+}
+
+.cu-dropdown-title {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.cu-dropdown-title a {
+  flex: 1;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0;
+}
+
+.cu-chevron {
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.cu-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+.cu-dropdown-title a {
+  background: none !important;
+  padding-left: 0 !important;
+}
+
+.cu-dropdown-title a:hover {
+  background: none !important;
+  padding-left: 0 !important;
+}
+
+.cu-dropdown-title a.cu-nav-active {
+  background: none !important;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cu-sidebar-banner {
+  margin-top: auto;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.cu-sidebar-banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =============================
+GLOBAL HEADING CONTROL (ALL SUBPAGES)
+============================= */
+
+/* Remove top gap from any first element inside content */
+.cu-content > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Force heading style everywhere */
+.cu-content .main-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(228, 55%, 45%);
+  margin: 0 0 8px 0 !important;   /* no top gap */
+  line-height: 1.3;
+}
+

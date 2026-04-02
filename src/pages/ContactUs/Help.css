@@ -1,0 +1,124 @@
+/* Help.css */
+.hp-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+
+.hp-intro {
+  font-size: 0.88rem;
+  color: #2d3a4a;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+/* Two column grid */
+.hp-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid #d0dcea;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.hp-two-col > div {
+  padding: 14px 16px;
+  border-bottom: 1px solid #d0dcea;
+  border-right: 1px solid #d0dcea;
+  font-size: 0.85rem;
+}
+
+.hp-two-col > div:nth-child(even) {
+  border-right: none;
+}
+
+.hp-two-col > div:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+/* Section Title */
+.hp-section-title {
+  font-family: "Arial", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1a2940;
+  margin: 0 0 6px;
+}
+
+/* Paragraph */
+.hp-para {
+  font-size: 0.86rem;
+  color: #2d3a4a;
+  line-height: 1.65;
+  margin: 0 0 10px;
+}
+
+/* Section headings outside grid */
+.hp-page > .hp-section-title {
+  font-size: 0.95rem;
+  margin: 20px 0 10px;
+  color: #1a2940;
+}
+
+/* Links */
+.hp-link {
+  color: #0055b3;
+  text-decoration: underline;
+  font-size: 0.85rem;
+}
+
+.hp-link:hover { color: #003580; }
+
+/* Tables */
+.hp-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #d0dcea;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.hp-table thead tr {
+  background: linear-gradient(90deg, #003580, #0055b3);
+}
+
+.hp-table thead th {
+  padding: 10px 12px;
+  text-align: left;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.hp-table thead th:last-child { border-right: none; }
+
+.hp-table tbody tr {
+  border-bottom: 1px solid #d0dcea;
+  transition: background 0.15s;
+}
+
+.hp-table tbody tr:hover { background: #f0f6ff; }
+.hp-table tbody tr:last-child { border-bottom: none; }
+
+.hp-table tbody td {
+  padding: 10px 12px;
+  color: #2d3a4a;
+  vertical-align: top;
+  line-height: 1.55;
+  border-right: 1px solid #d0dcea;
+  font-size: 0.84rem;
+}
+
+.hp-table tbody td:last-child { border-right: none; }
+
+@media (max-width: 768px) {
+  .hp-two-col { grid-template-columns: 1fr; }
+  .hp-two-col > div { border-right: none; }
+  .hp-two-col > div:nth-last-child(-n+2) { border-bottom: 1px solid #d0dcea; }
+  .hp-two-col > div:last-child { border-bottom: none; }
+}

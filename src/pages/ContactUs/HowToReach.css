@@ -1,0 +1,109 @@
+/* HowToReach.css */
+.htr-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+
+/* Map Wrapper */
+.htr-map-wrapper {
+  position: relative;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* Map Image - full width */
+.htr-map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Punjab District Map Button - top right of map */
+.htr-district-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff3cd;
+  border: 1.5px solid #f39c12;
+  color: #7a4000;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  z-index: 10;
+  text-align: center;
+  line-height: 1.4;
+  transition: all 0.2s;
+}
+
+.htr-district-btn:hover {
+  background: #f39c12;
+  color: #fff;
+}
+
+/* Legend - below map */
+.htr-legend {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding: 8px 4px;
+  font-size: 0.8rem;
+  color: #2d3a4a;
+  border-bottom: 1px solid #e0eaf5;
+  margin-bottom: 4px;
+}
+
+.htr-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.htr-legend-line {
+  display: inline-block;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.htr-legend-blue { background: #1565c0; }
+.htr-legend-green { background: #2e7d32; }
+.htr-legend-red { background: #c62828; }
+
+/* Map Credit */
+.htr-map-credit {
+  font-size: 0.72rem;
+  color: #7a8b9a;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+/* Sub Heading */
+.htr-sub-heading {
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  color: #1a2940;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+/* Paragraphs */
+.htr-para {
+  font-size: 0.88rem;
+  color: #2d3a4a;
+  line-height: 1.75;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.htr-link {
+  color: #0055b3;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.htr-link:hover { color: #003580; }
+
+@media (max-width: 768px) {
+  .htr-legend { gap: 12px; }
+  .htr-district-btn { font-size: 0.65rem; padding: 4px 7px; }
+}

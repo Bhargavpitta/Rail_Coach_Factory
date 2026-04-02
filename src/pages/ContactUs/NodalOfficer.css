@@ -1,0 +1,18 @@
+/* NodalOfficer.css */
+.no-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+.no-sub-title { font-family: "Georgia", serif; font-size: 1rem; color: #1a2940; margin: 0 0 18px; text-align: center; }
+.no-table-wrapper { 
+     overflow-x: auto; 
+  border-radius: 10px; 
+  border: 1px solid #d0dcea; 
+  max-width: 580px;
+  margin: 0 auto;
+ }
+.no-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.no-table tbody tr { border-bottom: 1px solid #eef2f8; transition: background 0.15s; }
+.no-table tbody tr:hover { background: #f0f6ff; }
+.no-table tbody tr:last-child { border-bottom: none; }
+.no-table tbody td { padding: 13px 18px; color: #2d3a4a; vertical-align: middle; }
+.no-td-label { font-weight: 700; color: #003580; width: 160px; background: #f0f6ff; }
+.no-email { color: #0055b3; text-decoration: none; font-weight: 500; }
+.no-email:hover { text-decoration: underline; }

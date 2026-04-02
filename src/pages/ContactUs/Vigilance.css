@@ -1,0 +1,30 @@
+/* Vigilance.css */
+.vg-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+.vg-desc { font-size: 0.88rem; color: #2d3a4a; line-height: 1.65; margin-bottom: 16px; }
+.vg-alert { background: #fff8c4; border: 1px solid #f39c12; border-radius: 8px; padding: 12px 18px; font-size: 0.88rem; color: #7a4000; margin-bottom: 16px; }
+.vg-link { color: #0055b3; text-decoration: none; font-weight: 600; }
+.vg-link:hover { text-decoration: underline; }
+.vg-contact-box { background: #eef5ff; border: 1px solid #c0d8f0; border-radius: 10px; padding: 20px 24px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
+.vg-contact-row { display: flex; align-items: center; gap: 14px; font-size: 0.9rem; flex-wrap: wrap; }
+.vg-key { font-weight: 700; color: #003580; min-width: 200px; }
+.vg-val { color: #1a2940; font-weight: 600; }
+.vg-email { color: #0055b3; text-decoration: none; font-weight: 600; }
+.vg-email:hover { text-decoration: underline; }
+.vg-address-block { background: #f8fafd; border: 1px solid #d0dcea; border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; font-size: 0.88rem; color: #2d3a4a; line-height: 1.6; }
+.vg-address-block h4 { font-family: "Georgia", serif; color: #003580; margin: 0 0 6px; }
+.vg-address-block p { margin: 0; }
+.vg-sub-title { font-family: "Georgia", serif; font-size: 1rem; color: #1a2940; margin: 20px 0 12px; }
+.vg-table-wrapper { overflow-x: auto; border-radius: 10px; border: 1px solid #d0dcea; margin-bottom: 20px; }
+.vg-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.vg-table thead tr { background: linear-gradient(90deg, #003580, #0055b3); }
+.vg-table thead th { padding: 11px 14px; text-align: left; color: #fff; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; }
+.vg-table tbody tr { border-bottom: 1px solid #eef2f8; transition: background 0.15s; }
+.vg-table tbody tr:hover { background: #f0f6ff; }
+.vg-table tbody tr:last-child { border-bottom: none; }
+.vg-table tbody td { padding: 12px 14px; color: #2d3a4a; vertical-align: middle; line-height: 1.5; }
+.vg-td-center { text-align: center; font-weight: 600; color: #003580; }
+.vg-role { font-size: 0.78rem; color: #5a6a7e; font-style: italic; }
+.vg-links-list { display: flex; flex-direction: column; gap: 8px; }
+.vg-doc-link { color: #0055b3; text-decoration: none; font-weight: 500; font-size: 0.9rem; padding: 8px 12px; background: #f8fafd; border: 1px solid #e4ecf5; border-radius: 8px; transition: all 0.2s; }
+.vg-doc-link:hover { background: #eef5ff; border-color: #b3d0f0; }
+@media (max-width: 768px) { .vg-key { min-width: unset; } }

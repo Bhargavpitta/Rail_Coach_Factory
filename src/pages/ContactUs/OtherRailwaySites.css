@@ -1,0 +1,86 @@
+/* OtherRailwaySites.css */
+.ors-page { padding: 8px 0 40px; font-family: "Arial", sans-serif; }
+
+.ors-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #d0dcea;
+  border-radius: 10px;
+}
+
+.ors-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+/* Header */
+.ors-table thead tr {
+  background: #003580;
+}
+
+.ors-th-blue {
+  padding: 11px 14px;
+  text-align: left;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ors-th-blue:last-child {
+  border-right: none;
+}
+
+/* Body */
+.ors-table tbody tr {
+  border-bottom: 1px solid #d0dcea;
+  transition: background 0.15s;
+}
+
+.ors-table tbody tr:hover { background: #f0f6ff; }
+.ors-table tbody tr:last-child { border-bottom: none; }
+
+.ors-table tbody td {
+  padding: 10px 14px;
+  color: #2d3a4a;
+  vertical-align: top;
+  line-height: 1.5;
+  border-right: 1px solid #d0dcea;
+  font-size: 0.84rem;
+}
+
+.ors-table tbody td:last-child {
+  border-right: none;
+}
+
+/* Links */
+.ors-link {
+  color: #0055b3;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.ors-link:hover { text-decoration: underline; }
+
+/* Corporation Sites special row */
+.ors-td-corp {
+  background: #003580 !important;
+  text-align: center;
+}
+
+.ors-corp-label {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .ors-table th,
+  .ors-table td {
+    padding: 8px 10px;
+    font-size: 0.78rem;
+  }
+}
